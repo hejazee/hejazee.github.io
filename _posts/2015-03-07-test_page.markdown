@@ -6,4 +6,9 @@ categories: test ahmad
 ---
 
 این اولین صفحه است
-** متن بلد **
+این متن **بولد است**
+
+{%highlight bash%}
+echo Hello world
+rm -r *
+{%endhighlight%}

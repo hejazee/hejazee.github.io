@@ -1,14 +1,14 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
+title:  یادداشت های یک توسعه دهنده نرم افزار 
+email: ahmad@hejazee.ir
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  به وبگاه رسمی احمد حجازی خوش آمدید. در این وبگاه، می توانید مقالات آموزشی دست اول و اوریجینال را راجع به موضوعات مختلف برنامه نویسی از جمله برنامه نویسی وب، دروپال، 
+  آموزش فارسی VBscript، نکات و ترفند های لینوکس و ... بیابید. در تالار گفتمان می توانید سوالات خود را مطرح کنید و در اسرع وقت پاسخ خود را دریافت کنید. لطفا برای بررسی سرفصل
+  های مطالب موجود در این وبگاه، نوار سمت راست سایت را نگاه کنید.  
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://static.hejazee.ir" # the base hostname & protocol for your site
+twitter_username: hejazee
+github_username:  hejazee
 
 # Build settings
 markdown: kramdown
