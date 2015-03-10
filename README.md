@@ -1,3 +1,1 @@
-{dir=rtl}
-paragraph
-
+<p dir="rtl">Hello</p>
