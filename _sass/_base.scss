@@ -64,7 +64,7 @@ figcaption {
  * Lists
  */
 ul, ol {
-    margin-left: $spacing-unit;
+    margin-right: $spacing-unit;
 }
 
 li {
@@ -109,8 +109,8 @@ a {
  */
 blockquote {
     color: $grey-color;
-    border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
+    border-right: 4px solid $grey-color-light;
+    padding-right: $spacing-unit / 2;
     font-size: 18px;
     letter-spacing: -1px;
     font-style: italic;
@@ -143,8 +143,8 @@ pre {
 
     > code {
         border: 0;
-        padding-right: 0;
         padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -156,17 +156,17 @@ pre {
 .wrapper {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
     max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-    margin-right: auto;
     margin-left: auto;
-    padding-right: $spacing-unit;
+    margin-right: auto;
     padding-left: $spacing-unit;
+    padding-right: $spacing-unit;
     @extend %clearfix;
 
     @include media-query($on-laptop) {
         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
         max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
         padding-left: $spacing-unit / 2;
+        padding-right: $spacing-unit / 2;
     }
 }
 
