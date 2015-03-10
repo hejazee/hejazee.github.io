@@ -1,0 +1,9 @@
+Information about how to install and maintain
+jekyll on local computer and sync with github version:
+
+https://help.github.com/articles/using-jekyll-with-pages/
+http://jekyllrb.com/docs/github-pages/
+
+
+How to update:
+bundle update
