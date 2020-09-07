@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://blog.hejazee.hugo/posts/</loc>
+    <lastmod>2020-09-07T10:49:42+04:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.hejazee.hugo/posts/my-first-post/</loc>
+    <lastmod>2020-09-07T10:49:42+04:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.hejazee.hugo/</loc>
+    <lastmod>2020-09-07T10:49:42+04:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.hejazee.hugo/categories/</loc>
+    <lastmod>2019-11-07T05:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.hejazee.hugo/categories/design-tools/</loc>
+    <lastmod>2019-11-07T05:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.hejazee.hugo/categories/hugo/</loc>
+    <lastmod>2019-11-07T05:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.hejazee.hugo/categories/meta-data/</loc>
+    <lastmod>2019-11-07T05:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.hejazee.hugo/posts/my-awesome-blog-post.4/</loc>
+    <lastmod>2019-11-07T05:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.hejazee.hugo/posts/my-awesome-blog-post/</loc>
+    <lastmod>2019-11-07T05:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.hejazee.hugo/posts/my-awesome-blog-post-2/</loc>
+    <lastmod>2019-11-07T05:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.hejazee.hugo/author/</loc>
+  </url>
+  
+  <url>
+    <loc>https://blog.hejazee.hugo/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>https://blog.hejazee.hugo/author/john-doe/</loc>
+  </url>
+  
+  <url>
+    <loc>https://blog.hejazee.hugo/author/mark-dinn/</loc>
+  </url>
+  
+  <url>
+    <loc>https://blog.hejazee.hugo/search/</loc>
+  </url>
+  
+  <url>
+    <loc>https://blog.hejazee.hugo/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>https://blog.hejazee.hugo/tools/</loc>
+  </url>
+  
+</urlset>
