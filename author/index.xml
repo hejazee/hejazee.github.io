@@ -11,30 +11,12 @@
     
     
     <item>
-      <title>John Doe</title>
-      <link>https://blog.hejazee.ir/author/john-doe/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.hejazee.ir/author/john-doe/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
-    </item>
-    
-    <item>
-      <title>Mark Dinn</title>
-      <link>https://blog.hejazee.ir/author/mark-dinn/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.hejazee.ir/author/mark-dinn/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
-    </item>
-    
-    <item>
       <title>احمد حجازی</title>
       <link>https://blog.hejazee.ir/author/ahmad-hejazee/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://blog.hejazee.ir/author/ahmad-hejazee/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
+      <description>بیوگرافی: آقای احمد حجازی، وبلاگ نویس قدیمی و از دروپالیست های پیشکسوت ایران است.</description>
     </item>
     
   </channel>

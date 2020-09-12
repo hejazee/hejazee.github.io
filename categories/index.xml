@@ -6,9 +6,37 @@
     <description>Recent content in Categories on وبلاگ احمد حجازی</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fa-IR</language>
+    <lastBuildDate>Thu, 20 Jun 1399 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://blog.hejazee.ir/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://blog.hejazee.ir/categories/hugo/</link>
+      <pubDate>Thu, 20 Jun 1399 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.hejazee.ir/categories/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>سایت استاتیک</title>
+      <link>https://blog.hejazee.ir/categories/%D8%B3%D8%A7%DB%8C%D8%AA-%D8%A7%D8%B3%D8%AA%D8%A7%D8%AA%DB%8C%DA%A9/</link>
+      <pubDate>Thu, 20 Jun 1399 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.hejazee.ir/categories/%D8%B3%D8%A7%DB%8C%D8%AA-%D8%A7%D8%B3%D8%AA%D8%A7%D8%AA%DB%8C%DA%A9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>متفرقه</title>
+      <link>https://blog.hejazee.ir/categories/%D9%85%D8%AA%D9%81%D8%B1%D9%82%D9%87/</link>
+      <pubDate>Thu, 20 Jun 1399 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.hejazee.ir/categories/%D9%85%D8%AA%D9%81%D8%B1%D9%82%D9%87/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
