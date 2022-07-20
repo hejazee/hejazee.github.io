@@ -1,69 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
-  <url>
-    <loc>https://blog.hejazee.ir/categories/</loc>
-    <lastmod>1399-06-20T00:00:00+00:00</lastmod>
-  </url>
+  <sitemap>
+    <loc>https://hejazee.ir/en/sitemap.xml</loc>
+    
+  </sitemap>
   
-  <url>
-    <loc>https://blog.hejazee.ir/categories/hugo/</loc>
-    <lastmod>1399-06-20T00:00:00+00:00</lastmod>
-  </url>
+  <sitemap>
+    <loc>https://hejazee.ir/fa/sitemap.xml</loc>
+    
+  </sitemap>
   
-  <url>
-    <loc>https://blog.hejazee.ir/posts/</loc>
-    <lastmod>1399-06-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.hejazee.ir/posts/1399/06/my-first-post/</loc>
-    <lastmod>1399-06-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.hejazee.ir/categories/%D8%B3%D8%A7%DB%8C%D8%AA-%D8%A7%D8%B3%D8%AA%D8%A7%D8%AA%DB%8C%DA%A9/</loc>
-    <lastmod>1399-06-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.hejazee.ir/categories/%D9%85%D8%AA%D9%81%D8%B1%D9%82%D9%87/</loc>
-    <lastmod>1399-06-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.hejazee.ir/</loc>
-    <lastmod>1399-06-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.hejazee.ir/posts/1394/07/%DA%86%DA%AF%D9%88%D9%86%D9%87-%D8%A7%D8%B2-%D9%81%DA%A9%D8%B1-%DA%A9%D8%B1%D8%AF%D9%86-%D8%A8%D9%87-%DB%8C%DA%A9-%DA%86%DB%8C%D8%B2-%DB%8C%D8%A7-%DB%8C%DA%A9-%D8%B4%D8%AE%D8%B5-%D8%AF%D8%B3%D8%AA-%D8%A8%D8%B1%D8%AF%D8%A7%D8%B1%DB%8C%D9%85/</loc>
-    <lastmod>1394-07-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.hejazee.ir/author/</loc>
-  </url>
-  
-  <url>
-    <loc>https://blog.hejazee.ir/search/</loc>
-  </url>
-  
-  <url>
-    <loc>https://blog.hejazee.ir/tags/</loc>
-  </url>
-  
-  <url>
-    <loc>https://blog.hejazee.ir/tools/</loc>
-  </url>
-  
-  <url>
-    <loc>https://blog.hejazee.ir/author/ahmad-hejazee/</loc>
-  </url>
-  
-  <url>
-    <loc>https://blog.hejazee.ir/contact/</loc>
-  </url>
-  
-</urlset>
+</sitemapindex>
