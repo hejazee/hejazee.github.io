@@ -1,10 +1,93 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on وبلاگ رسمی احمد حجازی</title>
-    <link>https://hejazee.ir/tags/</link>
-    <description>Recent content in Tags on وبلاگ رسمی احمد حجازی</description>
+    <title>Tags on Hugo Bootstrap Skeleton</title>
+    <link>https://hejazee.github.io/tags/</link>
+    <description>Recent content in Tags on Hugo Bootstrap Skeleton</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>fa-IR</language><atom:link href="https://hejazee.ir/tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>کپی رایت 2022 - کلیه حقوق محفوظ است.</copyright>
+    <lastBuildDate>Fri, 08 Jul 2022 11:34:47 +0800</lastBuildDate><atom:link href="https://hejazee.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Crop</title>
+      <link>https://hejazee.github.io/tags/crop/</link>
+      <pubDate>Fri, 08 Jul 2022 11:34:47 +0800</pubDate>
+      
+      <guid>https://hejazee.github.io/tags/crop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fill</title>
+      <link>https://hejazee.github.io/tags/fill/</link>
+      <pubDate>Fri, 08 Jul 2022 11:34:47 +0800</pubDate>
+      
+      <guid>https://hejazee.github.io/tags/fill/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Filters</title>
+      <link>https://hejazee.github.io/tags/filters/</link>
+      <pubDate>Fri, 08 Jul 2022 11:34:47 +0800</pubDate>
+      
+      <guid>https://hejazee.github.io/tags/filters/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fit</title>
+      <link>https://hejazee.github.io/tags/fit/</link>
+      <pubDate>Fri, 08 Jul 2022 11:34:47 +0800</pubDate>
+      
+      <guid>https://hejazee.github.io/tags/fit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>README</title>
+      <link>https://hejazee.github.io/tags/readme/</link>
+      <pubDate>Sun, 17 Apr 2022 16:35:29 +0800</pubDate>
+      
+      <guid>https://hejazee.github.io/tags/readme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Arch Linux</title>
+      <link>https://hejazee.github.io/tags/arch-linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hejazee.github.io/tags/arch-linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://hejazee.github.io/tags/linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hejazee.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>https://hejazee.github.io/tags/ubuntu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hejazee.github.io/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>https://hejazee.github.io/tags/windows/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hejazee.github.io/tags/windows/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
+

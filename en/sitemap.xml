@@ -2,64 +2,239 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://hejazee.ir/en/about/</loc>
+    <loc>https://hejazee.github.io/authors/</loc>
+    <lastmod>2022-07-08T11:34:47+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fa"
-                href="https://hejazee.ir/about/"
+                href="https://hejazee.github.io/fa/authors/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://hejazee.github.io/zh-cn/authors/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hejazee.ir/en/about/"
+                href="https://hejazee.github.io/authors/"
                 />
   </url><url>
-    <loc>https://hejazee.ir/en/categories/</loc>
+    <loc>https://hejazee.github.io/categories/</loc>
+    <lastmod>2022-07-08T11:34:47+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fa"
-                href="https://hejazee.ir/categories/"
+                href="https://hejazee.github.io/fa/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://hejazee.github.io/zh-cn/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hejazee.ir/en/categories/"
+                href="https://hejazee.github.io/categories/"
                 />
   </url><url>
-    <loc>https://hejazee.ir/en/contact/</loc>
+    <loc>https://hejazee.github.io/tags/crop/</loc>
+    <lastmod>2022-07-08T11:34:47+08:00</lastmod>
+  </url><url>
+    <loc>https://hejazee.github.io/tags/fill/</loc>
+    <lastmod>2022-07-08T11:34:47+08:00</lastmod>
+  </url><url>
+    <loc>https://hejazee.github.io/tags/filters/</loc>
+    <lastmod>2022-07-08T11:34:47+08:00</lastmod>
+  </url><url>
+    <loc>https://hejazee.github.io/tags/fit/</loc>
+    <lastmod>2022-07-08T11:34:47+08:00</lastmod>
+  </url><url>
+    <loc>https://hejazee.github.io/</loc>
+    <lastmod>2022-07-08T11:34:47+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fa"
-                href="https://hejazee.ir/contact/"
+                href="https://hejazee.github.io/fa/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://hejazee.github.io/zh-cn/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hejazee.ir/en/contact/"
+                href="https://hejazee.github.io/"
                 />
   </url><url>
-    <loc>https://hejazee.ir/en/tags/</loc>
+    <loc>https://hejazee.github.io/categories/image/</loc>
+    <lastmod>2022-07-08T11:34:47+08:00</lastmod>
+  </url><url>
+    <loc>https://hejazee.github.io/news/2022/07/more-image-processing-methods/</loc>
+    <lastmod>2022-07-08T11:34:47+08:00</lastmod>
+  </url><url>
+    <loc>https://hejazee.github.io/series/news/</loc>
+    <lastmod>2022-07-08T11:34:47+08:00</lastmod>
+  </url><url>
+    <loc>https://hejazee.github.io/news/</loc>
+    <lastmod>2022-07-08T11:34:47+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="fa"
-                href="https://hejazee.ir/tags/"
+                hreflang="zh-cn"
+                href="https://hejazee.github.io/zh-cn/news/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hejazee.ir/en/tags/"
+                href="https://hejazee.github.io/news/"
                 />
   </url><url>
-    <loc>https://hejazee.ir/en/</loc>
+    <loc>https://hejazee.github.io/authors/razonyang/</loc>
+    <lastmod>2022-07-08T11:34:47+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="fa"
-                href="https://hejazee.ir/"
+                hreflang="zh-cn"
+                href="https://hejazee.github.io/zh-cn/authors/razonyang/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://hejazee.ir/en/"
+                href="https://hejazee.github.io/authors/razonyang/"
                 />
+  </url><url>
+    <loc>https://hejazee.github.io/series/</loc>
+    <lastmod>2022-07-08T11:34:47+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="https://hejazee.github.io/fa/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://hejazee.github.io/zh-cn/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hejazee.github.io/series/"
+                />
+  </url><url>
+    <loc>https://hejazee.github.io/tags/</loc>
+    <lastmod>2022-07-08T11:34:47+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="https://hejazee.github.io/fa/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://hejazee.github.io/zh-cn/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hejazee.github.io/tags/"
+                />
+  </url><url>
+    <loc>https://hejazee.github.io/blog/</loc>
+    <lastmod>2022-04-17T16:35:29+08:00</lastmod>
+  </url><url>
+    <loc>https://hejazee.github.io/tags/readme/</loc>
+    <lastmod>2022-04-17T16:35:29+08:00</lastmod>
+  </url><url>
+    <loc>https://hejazee.github.io/blog/readme/</loc>
+    <lastmod>2022-04-17T16:35:29+08:00</lastmod>
+  </url><url>
+    <loc>https://hejazee.github.io/about/</loc>
+    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hejazee.github.io/archives/2022/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://hejazee.github.io/zh-cn/archives/2022/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hejazee.github.io/archives/2022/"
+                />
+  </url><url>
+    <loc>https://hejazee.github.io/tags/arch-linux/</loc>
+  </url><url>
+    <loc>https://hejazee.github.io/docs/installation/linux/archlinux/</loc>
+  </url><url>
+    <loc>https://hejazee.github.io/archives/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://hejazee.github.io/zh-cn/archives/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hejazee.github.io/archives/"
+                />
+  </url><url>
+    <loc>https://hejazee.github.io/contact/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://hejazee.github.io/zh-cn/contact/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hejazee.github.io/contact/"
+                />
+  </url><url>
+    <loc>https://hejazee.github.io/docs/</loc>
+  </url><url>
+    <loc>https://hejazee.github.io/series/guide/</loc>
+  </url><url>
+    <loc>https://hejazee.github.io/categories/installation/</loc>
+  </url><url>
+    <loc>https://hejazee.github.io/docs/installation/</loc>
+  </url><url>
+    <loc>https://hejazee.github.io/docs/introduction/</loc>
+  </url><url>
+    <loc>https://hejazee.github.io/tags/linux/</loc>
+  </url><url>
+    <loc>https://hejazee.github.io/docs/installation/linux/</loc>
+  </url><url>
+    <loc>https://hejazee.github.io/offline/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://hejazee.github.io/zh-cn/offline/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hejazee.github.io/offline/"
+                />
+  </url><url>
+    <loc>https://hejazee.github.io/search/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://hejazee.github.io/zh-cn/search/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hejazee.github.io/search/"
+                />
+  </url><url>
+    <loc>https://hejazee.github.io/tags/ubuntu/</loc>
+  </url><url>
+    <loc>https://hejazee.github.io/docs/installation/linux/ubuntu/</loc>
+  </url><url>
+    <loc>https://hejazee.github.io/tags/windows/</loc>
+  </url><url>
+    <loc>https://hejazee.github.io/docs/installation/windows/</loc>
   </url>
 </urlset>
