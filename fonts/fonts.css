@@ -1,0 +1,9 @@
+
+/**
+ * Import the sahel font.
+ */
+@import url("sahel/sahel.css");
+
+body, * {
+  font-family: Sahel, Tahoma, serif;
+}
