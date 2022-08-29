@@ -1,0 +1,197 @@
+<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="geo.region" content="IRAN"><link rel="canonical" href="https://hejazee.github.io/posts/1391/10/%D9%A2%DB%B5-%D8%AA%D8%B1%D9%81%D9%86%D8%AF-css-%D8%A8%D8%B3%DB%8C%D8%A7%D8%B1-%D9%85%D9%81%DB%8C%D8%AF-%DA%A9%D9%87-%D8%A8%D8%A7%DB%8C%D8%AF-%D8%A8%D8%AF%D8%A7%D9%86%DB%8C%D8%AF/"><link rel="shortcut icon" href="/favicon.ico" type="image/png"><title>٢۵ ترفند CSS بسیار مفید که باید بدانید | وبلاگ رسمی احمد حجازی</title><link rel="stylesheet" href="/lib/bootstrap-5.1.3-dist/css/bootstrap.rtl.min.css"><link rel="stylesheet" href="/lib/fontawesome-free-5.15.2-web/css/all.min.css"><link rel="stylesheet" href="/fonts/fonts.css"><link rel="stylesheet" href="/scss/index.172bdd1266bb92eb39450b3215cc97ecd4d7ec43ae649679fe3140f189d01c32.css" integrity="sha256-FyvdEma7kus5RQsyFcyX7NTX7EOuZJZ5/jFA8YnQHDI=" crossorigin="anonymous"></head><body><nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="farsaran-header-nav"><div class="container"><a class="navbar-brand order-0 flex-grow-1 flex-lg-grow-0" href="/"><img src="/logo.svg" alt="وبلاگ رسمی احمد حجازی" height="34"></a>
+<button class="navbar-toggler order-2 order-lg-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="نمایش منو">
+<span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse mb-3 mb-lg-0" id="navbarSupportedContent"><ul class="navbar-nav me-auto mb-2 mb-lg-0"><li class="nav-item"><a class="nav-link" href="/contact/">تماس</a></li><li class="nav-item"><a class="nav-link" href="/about/">درباره</a></li></ul></div></div></nav><div class="container mt-4"><div class="row"><div class="col-md-9"><header><h1 class="post-title fw-bold fs-2"><a class="text-dark" href="/posts/1391/10/%D9%A2%DB%B5-%D8%AA%D8%B1%D9%81%D9%86%D8%AF-css-%D8%A8%D8%B3%DB%8C%D8%A7%D8%B1-%D9%85%D9%81%DB%8C%D8%AF-%DA%A9%D9%87-%D8%A8%D8%A7%DB%8C%D8%AF-%D8%A8%D8%AF%D8%A7%D9%86%DB%8C%D8%AF/">٢۵ ترفند CSS بسیار مفید که باید بدانید</a></h1></header><small class="d-block text-secondary post-date">ارسال شده در
+<time datetime="2012-12-29">Dec 29, 2012</time></small><article class="blog-post" role="article" typeof="schema:Article"><p>در این مقاله، ٢۵ ترفند CSS بسیار مفید مطرح شده است که به شما کمک می کند صفحات وب بسیار عالی طراحی کنید. ممکن است شما برخی یا همه ی این ترفند ها را از قبل بلد باشید، با این حال، این می توانید یک مرجع دم دستی برای ترفند های جذاب CSS برای شما باشد که باید بدانید.</p><h4>این مقاله، ترجمه‌ی آزاد با حذف و اضافات از مقاله‌ی زیر است:
+<a href="http://webdeveloperplus.com/css/25-incredibly-useful-css-tricks-you-should-know/">http://webdeveloperplus.com/css/25-incredibly-useful-css-tricks-you-should-know/</a></h4><h2>١ - تغییر رنگ متن در حالت انتخاب شده</h2><p>ممکن نیست که این ترفند را بلد بوده باشید!<br>شما به کمک CSS می توانید رنگ متن صفحات وب را در حالت انتخاب شده مشخص کنید. این ترفند دست کم در مرورگر های جدید نظیر safari و firefox کار می کند.</p><pre class="brush: css">
+/**
+ * Safari and Opera
+ */
+::selection {
+  background: #c3effd; 
+  color: #000;  
+}
+/**
+ * Firefox
+ */
+::-moz-selection {
+  background: #c3effd; 
+  color: #000; 
+}
+</pre><p>همانطور که می بینید، با استفاده از انتخابگر ::selection می توانید متن های انتخاب شده را هدف قرار دهید</p><h2>٢ - جلوگیری از جهش اسکرول فایرفاکس</h2><p>اگر سایز محتوا از سایز پنجره کمتر باشد، معمولا فایرفاکس اسکرول را مخفی می کند.<br>مشکلی که گاها پیش می آید این است که در صورتی که به هر دلیل سایز محتوا تغییر کند یا سایز پنجره نسبت به محتوا تغییر کند، نوار اسکرول مجددا ظاهر می شود و باعث تولید جهش در صفحه می شود.<br>در صورتی که می خواهید اسکرول همواره در فایرفاکس نمایان باشد، می توانید از دستور زیر استفاده کنید:</p><pre class="brush: css">
+html {
+  overflow-y: scroll;
+}
+</pre><h2>٣ - شکستن صفحات و رفتن به صفحه ی بعد هنگام پرینت</h2><p>گرچه اکثر کاربران اینترنت ترجیح می دهند که صفحات وب را به صورت آنلاین مطالعه کنند، اما بعضی از کاربران شما ممکن است بخواهند متن مقاله را پرینت بگیرند و سپس مطالعه کنند.</p><p>به کمک CSS می توانید محل شکسته شدن صفحات و رفتن به صفحه ی بعد در هنگام پرینت را کنترل کنید. فقط کافی است که کد CSS زیر را به استایل های خود اضافه کنید و سپس به هر تگی که می خواهید در صفحه ی بعد چاپ شود، کلاس page-break را انتساب دهید.</p><pre class="brush: css">
+.page-break {
+  page-break-before: always;
+}
+</pre><h2>۴ - استفاده از دستور !important</h2><p>طراحان با تجربه، از کاربرد این دستور اطلاع دارند، اما معمولا تازه کارها، از این دستور !important در CSS بی اطلاع هستند و تعجب می کنند.<br>با افزودن دستور !important به انتهای دستور css تان، اولویت دستور مورد نظر را نسبت به دستورات دیگر که با آن در تضاد هستند، افزایش می دهید.<br>در کد زیر، رنگ زمینه، به دلیل وجود !important آبی خواهد بود (و نه قرمز)</p><pre class="brush: css">
+.page { 
+  background-color: blue !important;
+  background-color: red;
+}
+</pre><p>کاربرد روش فوق وقتی است که شما یک css rule می نویسید، اما متوجه می شوید که هیچ تاثیری ندارد! دلیل این مسئله احتمالا این است که یک دستور دیگر با اولویت بالاتر وجود دارد که اثر دستور شما را خنثی می کند.<br>برای این که دستور شما اولویت بالا تری داشته باشد و اثر دستورات دیگر را خنثی کند، می توانید از !important استفاده کنید.</p><h2>۵ - جایگذاری متن با تصویر</h2><p>این ترفند در مقاله ی قبلی شرح داده شده است:
+<a href="http://www.hejazee.ir/tutorials/books/%DB%B1%D9%A0-%D8%AA%D8%B1%D9%81%D9%86%D8%AF-css-%DA%A9%D9%87-%D8%A7%D8%AD%D8%AA%D9%85%D8%A7%D9%84%D8%A7-%D8%AA%D8%A7-%DA%A9%D9%86%D9%88%D9%86-%D9%86%D9%85%DB%8C-%D8%AF%D8%A7%D9%86%D8%B3%D8%AA%DB%8C%D8%AF">۱٠ ترفند CSS که احتمالا تا کنون نمی دانستید!</a></p><h2>۶ - ارتفاع حداقل که در تمامی مرورگر ها کار می کند.</h2><p>متاسفانه مرورگر Internet Explorer دستور min-height در CSS را درک نمی کند و لذا نمی توان با دستور فوق، ارتفاع حد اقل را در IE مشخص نمود.</p><p>برای حل این مشکلی می توانید از ترفند زیر استفاده کنید.</p><pre class="brush: css">
+#container{
+  /* all browsers except ie6 will respect the !important flag */
+  height: auto !important;
+  min-height: 500px;
+  /* Should have the same value as the min height above */
+  height: 500px;
+}
+</pre><h2>٧ - مشخص کردن لینک هایی که در پنجره ی جدید باز می‌شوند.</h2><p>کد CSS زیر سبب می شود که لینک هایی که در پنجره ی جدید باز می شوند، را با استایل ویژه نمایان می کند. به این ترتیب، بازدیدکنندگان سایت، قبل از این که بر روی لینک کلیک کنند، می دانند که این لینک در یک پنجره یا تب جدید باز خواهد شد</p><pre class="brush: css">
+a[target="_blank"]:before,
+a[target="new"]:before {
+  margin: 0 5px 0 0;
+  padding: 1px;
+  outline: 1px solid #333;
+  color: #333;
+  background: #ff9;
+  font: 12px "Zapf Dingbats";
+  content: "\279C";
+}
+</pre><p>در کد فوق چند نکته وجود دارد که خوب است به آنها توجه کنید:</p><ul><li>به انتخابگر a[target="_blank"] توجه کنید. در CSS می توان تگ های html را بر اساس مقادیر خواص آن ها فیلتر کرد. برای این منظور همانطور که می بینید، مقدار خواص را در درون [] قرار می دهیم. در این دستور لینک هایی که دارای خاصیت target="_blank" هستند را انتخاب کرده ایم. یعنی لینک هایی که در یک تب جدید باز می شوند.</li><li>به کلاس کاذب :before و :after توجه کنید. این دو کلاس، تگ خاصی را هدف نمی گیرند، بلکه فقط یک نقطه ی خالی در قبل یا بعد تگ مربوطه را انتخاب می کنند.</li><li>به دستور content در CSS توجه کنید. به کمک دستور content می توان یک کاراکتر یا یک متن را در قبل یا بعد از یک تگ قرار داد. توجه کنید که دستور content فقط زمانی قابل استفاده است که از کلاس کاذب :after و یا :before استفاده شده باشد.<br>در کد فوق، ما یک علامت \279C که به صورت یک فلش نمایش داده می شود در قبل و بعد لینک ها قرار داده ایم.</li></ul><h2>٨ - استایل دهی به لیست های مرتب به شیوه ی متفاوت</h2><img src="/sites/www.hejazee.ir/files/public/book/images/ordered-list-style.png" width="102" height="93" style="float:right;margin:0 0 0 10px" alt="Ordered list style"><p>استایل دهی به اعداد یک لیست مرتب (شماره گذاری شده) به شیوه ای متفاوت نسبت به باقی متن هریک از آیتم های لیست.<br>در کد زیر، همانطور که می بینید، یک فونت را برای تگ ol تعریف کرده ایم و بعد برای تگ p ی درون آن، مجددا فونت را تغییر داده ایم. به این ترتیب، استایل خود لیست (شامل اعداد لیست) با محتوای آن (که باید در درون p قرار گرفته باشد) متفاوت خواهد بود.</p><span style="clear:both">&nbsp;</span><pre class="brush: css">
+ol {
+  font: italic 1em Georgia, Times, serif;
+  color: #999999;
+}
+ol p {
+  font: normal .8em Arial, Helvetica, sans-serif;
+  color: #000000;
+}
+</pre><h2>٩ - استفاده از حروف بزرگ در اولین حرف مقاله</h2><img src="/sites/www.hejazee.ir/files/public/book/images/drop-caps.png" alt="Drop caps" width="428" height="106" style="display:block;margin:0 auto"><p>شما می توانید حرف اول مقاله تان را همانند روزنامه ها و مجلات، بزرگ کنید! برای ایجاد این جلوه، می توانید از کلاس کاذب <em style="white-space:nowrap">:first-letter</em> استفاده کنید.</p><pre class="brush: css">
+p:first-letter {
+  display: block;
+  margin: 5px 0 0 5px;
+  float: left;
+  color: #FF3366;
+  font-size: 3.0em;
+  font-family: Georgia;
+}
+</pre><h2>١٠ - شفافیت به گونه ای که در تمام مرورگر ها کار کند</h2><p>گرچه CSS 3 خاصیت جدید opacity را برای شفافیت معرفی کرده است، اما همه ی مرورگرها از آن پشتیبانی نمی کنند. این یک ترفند CSS برای شفافیت در همه ی مرورگرها می باشد</p><pre class="brush: css">
+.transparent_class {  
+  filter: alpha(opacity=50);  
+  -moz-opacity: 0.5;  
+  -khtml-opacity: 0.5;  
+  opacity: 0.5;  
+}  
+</pre><h2>١١ - موقعیت دهی عمودی در وسط با line-height</h2><p>این ترفند در مقاله ی قبلی شرح داده شده است:
+<a href="http://www.hejazee.ir/tutorials/books/%DB%B1%D9%A0-%D8%AA%D8%B1%D9%81%D9%86%D8%AF-css-%DA%A9%D9%87-%D8%A7%D8%AD%D8%AA%D9%85%D8%A7%D9%84%D8%A7-%D8%AA%D8%A7-%DA%A9%D9%86%D9%88%D9%86-%D9%86%D9%85%DB%8C-%D8%AF%D8%A7%D9%86%D8%B3%D8%AA%DB%8C%D8%AF" rel="nofollow">۱٠ ترفند CSS که احتمالا تا کنون نمی دانستید!</a></p><h2>١٢ - طرح ثابت در وسط صفحه</h2><p>این ترفند در مقاله ی قبلی شرح داده شده است:
+<a href="http://www.hejazee.ir/tutorials/books/%DB%B1%D9%A0-%D8%AA%D8%B1%D9%81%D9%86%D8%AF-css-%DA%A9%D9%87-%D8%A7%D8%AD%D8%AA%D9%85%D8%A7%D9%84%D8%A7-%D8%AA%D8%A7-%DA%A9%D9%86%D9%88%D9%86-%D9%86%D9%85%DB%8C-%D8%AF%D8%A7%D9%86%D8%B3%D8%AA%DB%8C%D8%AF" rel="nofollow">۱٠ ترفند CSS که احتمالا تا کنون نمی دانستید!</a></p><h2>١٣ - حذف اسکرول عمودی در textarea ها در IE</h2><p>مرورگر Internet Explorer بدون توجه به ارتفاع متن، یک اسکرول عمودی به کادر های متنی textarea اضافه می‌کند. با استفاده از روش زیر می توانید مشکل فوق را برطرف نمایید</p><pre class="brush: css">
+textarea{
+  overflow: auto;
+}
+</pre><h2>١۴ - حذف حاشیه از لینک های فعال</h2><p>برخی از مرورگر ها مانند فایرفاکس و IE دور لینک هایی که کاربر کلیک می کند، یک حاشیه ی نقطه چین نمایش می دهند. این یک ویژگی مفید است و به این ترتیب، کاربر می تواند بفهمد که روی کدام لینک کلیک کرده است و یا در حال حاضر فوکوس بر روی کدام لینک قرار دارد. با این حال، این ویژگی گاها باعث زشت شدن لینک می شود. برای حذف این حاشیه می توانید از کد زیر استفاده کنید:</p><pre class="brush: css">
+a:active, a:focus {
+  outline: none;
+}
+</pre><h2>١۵ - جلوگیری از مخفی شدن عناصر در IE</h2><p>گاهی اوقات مرورگر IE به شیوه ی خاصی رفتار می کند و سبب می شود که برخی عناصر مخفی شوند. و هنگامی که با موس چیزی را انتخاب می کنیم، مجددا عناصر مخفی شده، ظاهر می شوند. این مشکل به سبب برخی باگ ها در IE به هنگام برخورد با عناصر شناور (float) به وجود می‌آید. این مشکل با افزودن دستور position: relative به عناصری که مخفی می شوند، قابل حل می باشد.</p><h2>١۶ - آیکون های خاص بر اساس خواص</h2><p>انتخاب گرهای خواص در CSS بسیار قدرمند هستند و به شما امکانات زیادی را برای کنترل استایل عناصر متفاوت می دهند. به عنوان مثال شما می توانید بر اساس مقدار href در لینک ها (یا به عبارت دیگر، بر اساس مقصد لینک ها)، یک آیکون متفاوت را در سمت چپ لینک ها قرار دهید.</p><p>به این روش شما می توانید آیکون های متفاوتی را به لینک هایی که به یک فایل pdf یا یک فایل word اشاره می کنند انتساب دهید و کاربر قبل از این که کلیک کند، می داند که مقصد این لینک، فایل pdf است یا تصویر است یا ...</p><pre class="brush: css">
+a[href$='.doc'] { 
+  padding: 0 20px 0 0; 
+  background: transparent url(/graphics/icons/doc.gif) no-repeat center right; 
+}
+</pre><h2>١٧ - نشانگر pointer در CSS</h2><p>با استفاده از خاصیت cursor می توانید شکل اشاره گر موس را تغییر دهید. مقدار cursor: pointer سبب می شود که اشاره گر موس شبیه دست (مانند لینک ها) بشود.</p><p>به عنوان مثال فرض کنید که می خواهیم اشاره گر موس بر روی تمامی عناصری که توسط کاربر قابل کلیک هستند، مشابه لینک ها بشود. در زیر کد CSS برای انجام این کار آمده است:</p><pre class="brush: css">
+input[type=submit], label, select, .pointer {
+  cursor: pointer;
+}
+</pre><h2>١٨ - با حروف درشت نوشتن متن</h2><p>برای این که کلیه ی حروف یک متن با استفاده از حروف بزرگ نمایش داده شود، می توانید از دستور text-transform استفاده کنید. این دستور معمولا برای نمایش دادن عنوان صفحات مفید است.</p><pre class="brush: css">
+text-transform: capitalize;
+</pre><h2>١٩ - حروف درشت کوچک</h2><p>با استفاده از دستور زیر، می توانید کلیه ی حروف متن مورد نظر را با استفاده از حروف بزرگ (capital) بنویسید اما سایز حروف هر کلمه نسبت به حرف اول آن کلمه کوچک تر خواهد بود (small caps)</p><pre class="brush: css">
+font-variant: small-caps;
+</pre><h2>٢٠ - پررنگ کردن فیلد های ورودی متنی</h2><p>با استفاده از روش زیر می توانید فیلد های متنی که فوکوس را در اختیار دارند را highlight کنیم. البته این روش در IE کار نخواهد کرد</p><pre class="brush: css">
+input[type=text]:focus, input[type=password]:focus { 
+  border:2px solid #000; 
+}
+</pre><h2>٢١ - حذف حاشیه ی تصویر لینک شده</h2><p>در زیر لینک های تصویری (تصاویری که در درون لینک قرار گرفته باشند) یک حاشیه ی آبی رنگ زشت نمایش داده می شود. بهتر است که این حاشیه ی زائد را برای همه ی لینک های تصویری حذف کنیم و اگر مورد خاصی را خواستیم با حاشیه نمایش دهیم، مجددا حاشیه را به آن اضافه کنیم. برای این منظور، از دستور زیر استفاده می کنیم:</p><pre class="brush: css">
+a img {
+  border: none;
+}  
+</pre><h2>٢٢ - مرتب سازی فرم ها بدون استفاده از جدول</h2><img src="/sites/www.hejazee.ir/files/public/book/images/tableless-forms.png" width="302" height="80" alt="Tableless form" style="display:block;margin:0 auto"><p>آن زمانی که برای استایل دهی و مرتب سازی فرم ها از جدول ها استفاده می شد، گذشت. CSS به شما اجازه می دهد که فرم های قابل دسترس ایجاد کنید که دارای طرحی مشابه جدول باشند اما از جدول به هیچ عنوان در آن ها استفاده نشده باشد.</p><p>برای این منظور از تگ &lt;label> استفاده می کنیم. با استفاده از تگ label می توانیم مطمئن شویم که دسترسی پذیری فرم بیشتر خواهد شد. در زیر یک نمونه کد HTML و CSS مربوطه برای ایجاد یک فرم بدون استفاده از جدول آمده است و می توانید از آن به عنوان الگو برای طراحی فرم هایتان استفاده کنید:</p><p>کد HTML</p><pre class="brush: html">
+&lt;form method="post" action="#" &gt;
+  &lt;p&gt;&lt;label for="username" &gt;Username&lt;/label&gt;
+    &lt;input type="text" id="username" name="username" /&gt;
+  &lt;/p&gt;
+  &lt;p&gt;&lt;label for="password" &gt;Username&lt;/label&gt;
+    &lt;input type="password" id="password" name="pass" /&gt;
+  &lt;/p&gt;
+  &lt;p&gt;&lt;input type="submit" value="Submit" /&gt;&lt;/p&gt;
+&lt;/form&gt;
+</pre><p>کد CSS</p><pre class="brush: css">
+p label{ 
+  width: 100px; 
+  float: left; 
+  margin-right: 10px; 
+  text-align: right; 
+}
+</pre><p>به خاصیت for در تگ label توجه کنید. for در واقع id ی عنصری است که این label برای آن تهیه شده است. label ها برچسب هایی هستند که برای کادر های متنی و ... در صفحه قرار می گیرند. باید با خاصیت for مشخص کنیم که این label برای کدام عنصر می باشد.</p><h2>٢٣ - انتخاب یک سایز پایه‌ی مناسب برای صفحه</h2><p>تنظیم سایز فونت به طور مناسب به 62.5% در تگ &lt;body> باعث می شود که 1em به لحاظ سایز معادل 10px باشد. این کار به شما اجازه می دهد که به سادگی و آسانی از واحد em استفاده کنید و بدانید که معادل آن به پیکسل چقدر است.</p><pre class="brush: css">
+body {
+  font-size: 62.5%;
+}  
+</pre><h2>٢۴ - پر رنگ کردن تگ های acronym و abbr</h2><p>تگ <code>acronym</code> برای نوشتن علامات اختصاری سرنام کلمات مفید است و تگ <code>abbr</code> برای نوشتن کلمات اختصاری می باشد.</p><p>تگ های <code>acronym</code> و <code>abbr</code> اطلاعات مفیدی را برای کاربران، مرورگرها و موتور های جستجو فراهم می کنند. اما بیشتر مرورگرها، به جز فایرفاکس، این تگ ها را به طور متفاوتی نمایش نمی دهند.</p><p>در زیر ترفند CSS برای highlight کردن تگ های acronym و abbr آمده است.</p><pre class="brush: css">
+acronym, abbr{
+  border-bottom: 1px dotted #333;
+  cursor: help;
+}  
+</pre><h2>٢۵ - بازنشانی CSS توسط <a href="http://meyerweb.com/eric/tools/css/reset/" rel="nofollow" style="color:#b74121">Eric Meyer</a></h2><p>قطعه کد CSS زیر کلیه ی مقادیر پیش فرض مرورگر را بازنشانی می کنند و سبب می شود که کدهای css شما در تمامی مرورگر به گونه ی یکسان کار کند و ناسازگاری مرورگر ها را خنثی می کند.</p><pre class="brush: css">
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/**
+ * remember to define focus styles!
+ */
+:focus {
+  outline: 0;
+}
+
+/**
+ * remember to highlight inserts somehow!
+ */
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+
+/**
+ * tables still need 'cellspacing="0"' in the markup
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+</pre><h5>برای ترجمه و نوشتن این مطلب، زمان زیادی صرف شده است، لطفا نظرات سازنده ی خود را با استفاده از فرم زیر برای من ارسال کنید. موفق باشید.</h5><h5>مطالب مرتبط:</h5><ul><li><a href="/posts/1390/12/%D8%B3%D8%A7%D8%AE%D8%AA-%DB%8C%DA%A9-%D9%85%D9%86%D9%88%DB%8C-%D9%85%D8%AA%D8%AD%D8%B1%DA%A9-%D8%AC%D8%B0%D8%A7%D8%A8-%D9%81%D9%82%D8%B7-%D8%A8%D8%A7-css-/">ساخت یک منوی متحرک جذاب فقط با CSS !</a></li><li><a href="/posts/1391/10/%DB%B1%D9%A0-%D8%AA%D8%B1%D9%81%D9%86%D8%AF-css-%DA%A9%D9%87-%D8%A7%D8%AD%D8%AA%D9%85%D8%A7%D9%84%D8%A7-%D8%AA%D8%A7-%DA%A9%D9%86%D9%88%D9%86-%D9%86%D9%85%DB%8C-%D8%AF%D8%A7%D9%86%D8%B3%D8%AA%DB%8C%D8%AF/">۱٠ ترفند CSS که احتمالا تا کنون نمی دانستید!</a></li></ul></article></div><aside class="col-md-3 mt-4"><h3>Monthly Archive</h3><ul><li><a href="/month/1395-06/" title="All posts from 1395-06">1395-06</a> (1)</li><li><a href="/month/1395-01/" title="All posts from 1395-01">1395-01</a> (1)</li><li><a href="/month/1394-12/" title="All posts from 1394-12">1394-12</a> (3)</li><li><a href="/month/1394-08/" title="All posts from 1394-08">1394-08</a> (1)</li><li><a href="/month/1394-07/" title="All posts from 1394-07">1394-07</a> (1)</li><li><a href="/month/1394-03/" title="All posts from 1394-03">1394-03</a> (1)</li><li><a href="/month/1394-02/" title="All posts from 1394-02">1394-02</a> (1)</li><li><a href="/month/1393-12/" title="All posts from 1393-12">1393-12</a> (1)</li><li><a href="/month/1393-07/" title="All posts from 1393-07">1393-07</a> (1)</li><li><a href="/month/1393-06/" title="All posts from 1393-06">1393-06</a> (2)</li><li><a href="/month/1393-05/" title="All posts from 1393-05">1393-05</a> (2)</li><li><a href="/month/1393-04/" title="All posts from 1393-04">1393-04</a> (4)</li><li><a href="/month/1393-03/" title="All posts from 1393-03">1393-03</a> (5)</li><li><a href="/month/1393-02/" title="All posts from 1393-02">1393-02</a> (1)</li><li><a href="/month/1393-01/" title="All posts from 1393-01">1393-01</a> (4)</li><li><a href="/month/1392-12/" title="All posts from 1392-12">1392-12</a> (5)</li><li><a href="/month/1392-10/" title="All posts from 1392-10">1392-10</a> (5)</li><li><a href="/month/1392-06/" title="All posts from 1392-06">1392-06</a> (1)</li><li><a href="/month/1392-04/" title="All posts from 1392-04">1392-04</a> (1)</li><li><a href="/month/1392-02/" title="All posts from 1392-02">1392-02</a> (1)</li><li><a href="/month/1392-01/" title="All posts from 1392-01">1392-01</a> (5)</li><li><a href="/month/1391-11/" title="All posts from 1391-11">1391-11</a> (5)</li><li><a href="/month/1391-10/" title="All posts from 1391-10">1391-10</a> (4)</li><li><a href="/month/1391-09/" title="All posts from 1391-09">1391-09</a> (2)</li><li><a href="/month/1391-08/" title="All posts from 1391-08">1391-08</a> (3)</li><li><a href="/month/1391-07/" title="All posts from 1391-07">1391-07</a> (6)</li><li><a href="/month/1391-05/" title="All posts from 1391-05">1391-05</a> (1)</li><li><a href="/month/1391-04/" title="All posts from 1391-04">1391-04</a> (1)</li><li><a href="/month/1391-03/" title="All posts from 1391-03">1391-03</a> (2)</li><li><a href="/month/1391-02/" title="All posts from 1391-02">1391-02</a> (4)</li><li><a href="/month/1391-01/" title="All posts from 1391-01">1391-01</a> (6)</li><li><a href="/month/1390-12/" title="All posts from 1390-12">1390-12</a> (9)</li><li><a href="/month/1390-11/" title="All posts from 1390-11">1390-11</a> (8)</li><li><a href="/month/1390-10/" title="All posts from 1390-10">1390-10</a> (7)</li><li><a href="/month/1390-09/" title="All posts from 1390-09">1390-09</a> (4)</li><li><a href="/month/1390-08/" title="All posts from 1390-08">1390-08</a> (7)</li><li><a href="/month/1390-07/" title="All posts from 1390-07">1390-07</a> (14)</li><li><a href="/month/1390-06/" title="All posts from 1390-06">1390-06</a> (18)</li></ul></aside></div></div><footer id="footer-wrapper"><div id="footer-bottom-wrapper"><div class="container"><div class="row"><div class="col-12"><p dir="ltr">&copy; Copyright 2011-2022 * Ahmad Hejazee * All rights reserved.</p><small dir="ltr">Proudly Powered by Drupal 10 ;)</small></div></div></div></div></footer><script src="/lib/jQuery/jquery-3.6.0.min.js"></script>
+<script src="/lib/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script></body></html>

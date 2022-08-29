@@ -1,0 +1,158 @@
+<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="geo.region" content="IRAN"><link rel="canonical" href="https://hejazee.github.io/posts/1391/07/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-objective-j/"><link rel="shortcut icon" href="/favicon.ico" type="image/png"><title>آموزش Objective-J | وبلاگ رسمی احمد حجازی</title><link rel="stylesheet" href="/lib/bootstrap-5.1.3-dist/css/bootstrap.rtl.min.css"><link rel="stylesheet" href="/lib/fontawesome-free-5.15.2-web/css/all.min.css"><link rel="stylesheet" href="/fonts/fonts.css"><link rel="stylesheet" href="/scss/index.172bdd1266bb92eb39450b3215cc97ecd4d7ec43ae649679fe3140f189d01c32.css" integrity="sha256-FyvdEma7kus5RQsyFcyX7NTX7EOuZJZ5/jFA8YnQHDI=" crossorigin="anonymous"></head><body><nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="farsaran-header-nav"><div class="container"><a class="navbar-brand order-0 flex-grow-1 flex-lg-grow-0" href="/"><img src="/logo.svg" alt="وبلاگ رسمی احمد حجازی" height="34"></a>
+<button class="navbar-toggler order-2 order-lg-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="نمایش منو">
+<span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse mb-3 mb-lg-0" id="navbarSupportedContent"><ul class="navbar-nav me-auto mb-2 mb-lg-0"><li class="nav-item"><a class="nav-link" href="/contact/">تماس</a></li><li class="nav-item"><a class="nav-link" href="/about/">درباره</a></li></ul></div></div></nav><div class="container mt-4"><div class="row"><div class="col-md-9"><header><h1 class="post-title fw-bold fs-2"><a class="text-dark" href="/posts/1391/07/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-objective-j/">آموزش Objective-J</a></h1></header><small class="d-block text-secondary post-date">ارسال شده در
+<time datetime="2012-09-30">Sep 30, 2012</time></small><article class="blog-post" role="article" typeof="schema:Article"><p>این مقاله، ترجمه‌ی آزاد از مقاله‌ی زیر است:
+http://cappuccino.org/learn/tutorials/objective-j-tutorial.php
+کلیه ی حقوق این اثر متعلق به مترجم است و هرگونه کپی کردن و تکثیر این اثر بدون مجوز کتبی مترجم (و مولف) ممنوع می باشد.</p><h2>آموزش Objective-J</h2><p>Objective-J یک زبان برنامه نویسی جدید است که بر اساس زبان Objective C می باشد. این زبان، یک مجموعه مافوق JavaScript به حساب می‌آید به این معنی که هر کدی که در جاوا اسکریپت صحیح باشد، در Objective J نیز صحیح است. هر کسی که با جاوا اسکریپت و مفاهیم شی گرایی و و در حالت خاص با وراثت کلاسیک آشنایی داشته باشد، باید در یادگیری زبان Objective J نیز هیچ مشکلی نداشته باشد. آشنا بودن با Objective C کمک خواهد کرد، اما ضروری نیست.</p><h2>کلاس‌ها</h2><p>Objective J دارای دو نوع از اشیا می‌باشد. اشیای طبیعی جاوا اسکریپت و اشیای Objective J. اشیای جاوا اسکریپت دقیقا همان چیزی هستند که از اسمشان بر می‌آید، اشیای طبیعی در جاوا اسکریپت. اما اشیای Objective J، نوع خاصی از اشیای طبیعی می باشند که توسط Objective J افزوده شده است. این اشیای جدید، به جای مدل prototype در جاوا اسکریپت، مبتنی بر کلاس ها و وراثت کلاسیک در کلاس‌ها می‌باشند مانند جاوا و C++.
+ساخت یک کلاس در Objective J کار ساده ای است. در زیر یک نمونه از کلاس Person تعریف شده است که شامل متغیر عضو name می باشد:</p><pre style="direction:ltr!important;text-align:ltr;font-family:consolas,tahoma!important;border-left:3px solid blue;padding-left:4px;margin-left:4px">
+@implementation Person : CPObject
+{
+  CPString name;
+}
+@end
+</pre><p>آغاز تعریف کلاس، همیشه با کلمه‌ی کلیدی @implementation شروع می‌شود و به دنبال آن، نام کلاس می‌آید. سپس یک کولون (:) قرار میگیرد و بعد از آن، نام کلاسی ذکر می‌شود که کلاس ما، زیر کلاس (فرزند) آن کلاس خواهد بود (کلاس والد). در مثال فوق، ما داریم زیر کلاسِ کلاسِ CObject را تعریف می کنیم که کلاس ریشه برای اکثر کلاس‌های دیگر به حساب می‌آید. شما نیازی به کلاس والد ندارید، اما در بیشتر اوقات ترجیح می‌دهید که از یکی از کلاس‌های والد استفاده کنید.
+پس از تعریف، با استفاده از آکولاد، یک بلاک ایجاد می کنیم که شامل تعریف کلیه‌ی متغیر های عضو کلاس می باشد. هر متغیر، در یک سطر جداگانه قرار می گیرد و شامل یک نوع و یک نام متغیر و یک سمیکالن می باشد. به لحاظ تکنیکی، مشخص کردن نوع متغیر اختیاری است، اما اکیدا توصیه می شود که نوع متغیر ها را مشخص کنید. تعریف متغیر های عضو، مهم است زیرا هر متغیری که در مکان های دیگر در کلاس شما مورد استفده قرار بگیرد، اگر در این قسمت تعریف نشده باشد، به صورت خودکار به یک متغیر عمومی global تبدیل خواهد شد.
+برای پایان دادن به تعریف کلاس، از کلمه‎ی کلیدی @end استفاده می کنیم.</p><h2>متدها</h2><p>درست همانند کلاس‌ها، متد های طبیعی جاوا اسکریپت نیز به قوت خودشان باقی هستند و قابل استفاده می باشند، اما اضافه بر آنها، متدهای خاص Objective J موجود می باشند که بخشی از سیستم کلاس های جدید به حساب می آیند. اجازه دهید که چند تا متد جهت دسترسی به خواص شی ایجاد کنیم:</p><pre style="direction:ltr!important;text-align:ltr;font-family:consolas,tahoma!important;border-left:3px solid blue;padding-left:4px;margin-left:4px">
+- (void)setName:(CPString)aName
+{
+  name = aName;
+}
+<ul>
+<li>(CPString)name
+{ 
+return name;
+}
+</pre></li></ul><p>خطوط فوق را می توان بعد از دستور @implementation و بلاک تعریف متغیرها، در هر جایی از کد قرار داد مشروط به این که پیش از دستور @end باشد. این شیوه‌ی کد نویسی برای تمام کسانی که زبان‌های مشابه C (از جمله جاوا اسکریپت) را کد نویسی کرده اند، آشنا است. تنها مورد جدید و جالب، شیوه‌ی تعریف متد است.
+تعریف هر متدی با یک علامت – و یا + شروع می شود. علامت منها – برای متد های استفاده می شود که فقط در instance موجود می باشند (یعنی این متد ها را فقط می توان بر روی instance های آن کلاس فراخوانی کرد) هر دو متدی که در مثال فوق ایجاد کردیم، متدهای instance می باشند. البته واضح است زیرا این متد ها فقط مقادیر متغیر های عضو اشیا را برمی گردانند و یا ست می کنند.
+پس از علامت منها یا بعلاوه، نوع مقدار بازگشتی متد را در داخل پرانتز مشخص می کنیم. نکته‌ی خاصی در این وجود ندارد. مجددا در این جا هم تعریف نوع بازگشتی الزامی نیست اما اکیدا توصیه می شوند زیرا به مستند سازی کد کمک می کنند. در انتها، ما نام متد را مشخص می کنیم. در زبان Objective J ، پارامتر های متد ها، در درون نام متد تعریف می شوند. متد هایی که در مثال بالا تعریف کردیم، عبارتند از name و setName: . دقت کنید که علامت دو نقطه (:) پس از نام متد به این معنی است که پس از آن لیست پارامتر ها می آید.
+هنگامی که یک متد، بیش از یک پارامتر داشته باشد، پارامتر‌ها را با کولون (:) از هم جدا می کنیم. در این حالت، به جز پارامتر اول، باقی پارامتر ها، داری یک label هم می باشند و تعریف هر پارامتر به این صورت است: برچسب پارامتر، کولون، نوع پارامتر در درون پرانتز، و سپس خود نام پارامتر:</p><pre style="direction:ltr!important;text-align:ltr;font-family:consolas,tahoma!important;border-left:3px solid blue;padding-left:4px;margin-left:4px">
+- (void) setJobTitle: (CPString)aJobTitle   company: (CPString) aCompany
+</pre><p>در Objective J نام متد به صورت زیر استفاده می شود: نام اصلی متد (بخش آغازین تعریف متد) و سپس نام تک تک label ها به ترتیب، که با کولون از هم جدا شده اند.
+در مثال فوق، نام متد تعریف شده عبارت است از</p><pre style="direction:ltr!important;text-align:ltr;font-family:consolas,tahoma!important;border-left:3px solid blue;padding-left:4px;margin-left:4px">
+ setJobTitle:company:
+</pre><p>پارامترهای یک متد باید به ترتیب ارسال شوند و همه‌ی پارامترها الزامی می باشند. برای فراخوانی چنین متد چند پارامتره ای، باید اطلاعاتمان را پس از هر label قرار دهیم و به متد ارسال کنیم:</p><pre style="direction:ltr!important;text-align:ltr;font-family:consolas,tahoma!important;border-left:3px solid blue;padding-left:4px;margin-left:4px">
+[ myPerson     setJobTitle: "Founder"     company: "280 North" ];
+</pre><p>همانطور که می بینید، به دنبال هر کولون، مقدار ورودی ای که به پارامتر مربوطه ارسال می شود آمده است. به ازای هر پارامتر متد، باید یک ترکیب "برچسب، کولون، مقدار" داشته باشیم.
+یکی از شیوه‌هایی که در زبان Objective J و Cappuccino خواهید یافت، ارسال یک متد به عنوان آرگومان به یک متد دیگر است. این روش اغلب در سیستم های مدیریت رویداد و delegation استفاده می شود. از آنجایی که متد ها مانند اشیای ابتدایی جاوا اسکریپت نیستند، برای اشاره به آن ها از یک شیوه ی خاص استفاده می کنیم به این صورت: @selector()
+برای مثال اگر بخواهیم متد قبلی را به عنوان آرگومان به یک متد دیگر اسال کنیم، چنین کدی می نویسیم:</p><pre style="direction:ltr!important;text-align:ltr;font-family:consolas,tahoma!important;border-left:3px solid blue;padding-left:4px;margin-left:4px">
+[ fooObject  setCallbackSeletctor:@selector(setJobTitle:company:) ];
+</pre><p>همان طور که می بینید، نام متد همراه با کولون ها و لیست پارامتر ها و label هایش به @selector ارسال شده است.</p><h2>استفاده از اشیا و کلاس ها</h2><p>تا این جا، ما مقدمات اشیا و کلاس های Objective J را شرح دادیم. اجازه دهید که طریقه ی استفاده از آن ها را هم شرح دهیم. کد زیر یک شی Person جدید ایجاد می کند و نام آن را ست می کند:</p><pre style="direction:ltr!important;text-align:ltr;font-family:consolas,tahoma!important;border-left:3px solid blue;padding-left:4px;margin-left:4px">
+var myPerson = [[Person alloc] init];
+[myPerson setName:”john”];
+</pre><p>در Objective J به فراخوانی متد ها، در اصطلاح، ارسال پیام می گوییم. و برای ارسال یک پیغام به یک شی، از علامت کروشه به این صورت استفاده می کنیم:</p><pre style="direction:ltr!important;text-align:ltr;font-family:consolas,tahoma!important;border-left:3px solid blue;padding-left:4px;margin-left:4px">
+[object message]
+</pre><p>قبلا توضیح دادم که برخی از متد ها، متد های کلاس هستند یعنی بر روی خود کلاس قابل فراخوانی هستند. متد alloc یکی از همین متد ها است. کلیه‌ی کلاس ها در Objective J دارای یک متد خاص به نام alloc است که این متد، یک instance جدید از آن کلاس را ایجاد می کند و برمی گرداند.
+در مثال بالا، ما متد alloc را بر روی کلاس Person فراخوانی می کنیم که در نتیجه یک instance جدید از کلاس Person بر می گرداند. سپس ما متد init را بر روی instance ایجاد شده فراخوانی می کنیم. هر دو متد init و alloc یک reference به شی ایجاد شده برمیگردانند که ما می توانیم به کمک آن، متغیر myPerson را مقدار دهی کنیم. متد init نیز درست همانند alloc ، از کلاس پایه‌ی CPObject به کلیه‌ی کلاس ها به ارث می رسد.
+متد کلاسی alloc معادل کلمه ی کلیدی new در بسیاری از زبان ها از جمله Javascript, C++, Java است. متد instance ای init هم همانند متدهای constructor در زبان های فوق الذکرمی باشد و عمل آماده سازی initialization را بر روی شی جدید انجام می دهد.
+برخی از کلاس ها متد های init خاص خودشان را تعریف می کنند. مانند کلاس CPView که از روش زیر استفاده می کند:</p><pre style="direction:ltr!important;text-align:ltr;font-family:consolas,tahoma!important;border-left:3px solid blue;padding-left:4px;margin-left:4px">
+- (id) initWithFrame: (CGRect)aFrame
+</pre><p>کلیه ی کلاس‌های فرزند (زیر کلاس ها) باید متد init کلاس والد شان را فراخوانی کنند. در کد زیر، یک متد init سفارشی برای کلاس Person تعریف کرده ایم:</p><pre style="direction:ltr!important;text-align:ltr;font-family:consolas,tahoma!important;border-left:3px solid blue;padding-left:4px;margin-left:4px">
+- (id)initWithName:(CPString)aName
+{
+  self = [super init];
+  if (self)
+  {
+    name = aName; 
+  }
+  return self;
+}
+</pre><p>در متد init باید ابتدا متد init کلاس والد (که با کلمه‌ی کلیدی super مشخص می شود) را فراخوانی کنیم که یک reference به instance آماده سازی شده را برمی گرداند. این instance ای که برگردانده می شود را باید به متغیر self انتساب دهیم (در این جا، متد init کلاس والد، instance اصلی را با یک instance جدید جایگزین کرد.) سپس باید بررسی کنیم که آیا self به درستی آماده شده است یا خیر. در صورتی که self به درستی آماده شده باشد، می‌توانیم عملیات مورد نظرمان مانند مقدار دهی name به aName را بر روی آبجکت انجام دهیم. در پایان، متغیر self را return می کنیم تا کدی که متد ما را فراخوانی کرده است، شی آماده شده را به دست بیاورد.
+self معادل کلمه‌ی کلیدی this در جاوااسکریپت می‌باشد. همانطور که this در جاوا اسکریپت، به آبجکت جاوا اسکریپت جاری اشاره می کند، self نیز به آبجکت جاری در Objective-J اشاره می کند. درست مانند جاوا اسکریپت، self.foo به متغیر foo از آبجکت self اشاره می کند؛ اما بر خلاف جاوا اسکریپت، در اینجا self الزامی نیست. بنا بر این می توانید از متغیر foo به طور مستقیم در داخل تمامی متد‌های instance استفاده کنید.
+بسیاری از کلاس‌های کاپوچینو (Cappuccino) یک مدل کمی متفاوت برای ساخت اشیا ارائه می دهند که می تواند مناسب تر باشد. به جای فراخوانی alloc و init ، این کلاس ها، متدهای خاص خودشان را برای ساخت آبجکت های جدید تعریف می کنند. توجه کنید که در داخل متد‌های کلاس، کلمه‌ی کلیدی self به خود کلاس اشاره می کند.</p><pre style="direction:ltr!important;text-align:ltr;font-family:consolas,tahoma!important;border-left:3px solid blue;padding-left:4px;margin-left:4px">
++ (id) personWithName: (CPString)aName
+{
+  return [[self alloc] initWithName:aName];
+}
+</pre><p>که به صورت زیر قابل فراخوانی خواهد بود:</p><pre style="direction:ltr!important;text-align:ltr;font-family:consolas,tahoma!important;border-left:3px solid blue;padding-left:4px;margin-left:4px">
+var joe = [Person personWithName:"Joe"];
+</pre><h2>وارد کردن کد</h2><p>یکی از تکنیک‌های خوبی که در جاوا اسکریپت یافت نمی‌شود، قابلیت وارد کردن کدها، مشابه زبان های دیگر مثل جاوا و C است. اما Objective J برای این منظور، از عبارت @importاستفاده می کند.</p><pre style="direction:ltr!important;text-align:ltr;font-family:consolas,tahoma!important;border-left:3px solid blue;padding-left:4px;margin-left:4px">
+@import &lt;Foundation/CPObject.j&gt;
+@import &lt;AppKit/CPView.j&gt;
+@import "MyClass.j"
+</pre><p>دو نوع عبارت @import وجود دارد. علامت &lt;>برای وارد کردن کد‌های کتابخانه ای استفاده می شود و علامت کوتیشن "" برای وارد کردن کدهای خود پروژه استفاده می شود. هنگام وارد کردن کدهای کتابخانه ای، از قابلیت درونی جستجو برای پیدا کردن فایل مورد نظر در مکان های تعریف شده استفاده می شود. هنگام وارد کردن فایل های محلی با "" فقط در پوشه ی جاری و زیر پوشه‌های آن در پروژه جستجو می شود.</p><h2>مدیریت حافظه</h2><p>زبان جاوا اسکریپت و همچنین Objective J دارای مکانیسم جمع آوری زباله (Garbage Colletcor) هستند. بنابراین لازم نیست شما مانند Objective C پس از فراخوانی متدها، متغیر هایتان را پاک کنید و جمع آوری کنید. بسیاری از مشکلات ناشی از دستکاری در DOM توسط Objective J اصلاح می شوند.
+البته این به این معنی نیست که در Objective J نشت اشیا غیر ممکن است. همانند هر زبان دیگری که دارای مکانیسم جمع آوری زباله (Garbage Colletcor) است، ممکن است که به طور تصادفی یک ارجاع به شی، باقی بماند و قابل آزاد شدن نباشد. بنابراین این مطلب را به خاطر داشته باشید.</p><h2>دسته ها (Category ها)</h2><p>دسته ها به شما اجازه می دهند که بدون این که لازم باشد یک زیر کلاس ایجاد کنید یا سورس کد یک کلاس را تغییر دهید، متد های جدید را به کلاس اضافه کنید. متد یا متد های جدید، به محض لود شدن دسته، بخشی از تمامی instance های آن کلاس خواهند شد.
+این ویژگی در بسیاری از سناریو ها مفید خواهد بود. برای مثال هنگامی که بخواهید به کلاس های درون ساخت، متدهای جدید اضافه کنید. مثلا فرض کنید می خواستید کلیه ی آبجکت های CPString دارای یک متد باشند که معکوس رشته را برگرداند. می توانستید یک دسته مانند زیر ایجاد کنید:</p><pre style="direction:ltr!important;text-align:ltr;font-family:consolas,tahoma!important;border-left:3px solid blue;padding-left:4px;margin-left:4px">
+@import &lt;Foundation/CPString.j&gt;
+@implementation CPString (Reversing)
+- (CPString)reverse
+{
+  var reversedString = "",
+  index = [self length];
+  while(index--)
+    reversedString += [self characterAtIndex:index];
+  return reversedString;
+}
+@end
+</pre><p>اکنون می توانید متد reverse را بر روی هر رشته ای فراخوانی کنید و رشته‌ی معکوس را بدست بیاورید.</p><pre style="direction:ltr!important;text-align:ltr;font-family:consolas,tahoma!important;border-left:3px solid blue;padding-left:4px;margin-left:4px">
+var myString = "hello world";
+var reversed = [myString reverse];
+alert(reversed); // alerts "dlrow olleh"
+</pre><p>طریقه ی ایجاد دسته به این صورت است که ابتدا می نویسیم @implementation و سپس نام کلاسی که می خواهیم به آن متد اضافه کنیم را می نویسیم و سپس نام دسته را در درون پرانتز قرار می دهیم. در انتهای تعریف دسته هم، @end می آید. هر متدی که پیش از @end اضافه شده باشد، بخشی از دسته خواهد بود. توجه کنید که به کمک دسته ها نمی توانید متغیر های instance را به کلاس اضافه کنید. با این حال، به دلیل طبیعت پویای اشیای جاوا اسکریپت، می توان متغیر های مورد نظر را به طور مستقیم با دستکاری خصوصیات شی، به آبجکت اضافه کرد:</p><pre style="direction:ltr!important;text-align:ltr;font-family:consolas,tahoma!important;border-left:3px solid blue;padding-left:4px;margin-left:4px">
+instance.newProperty = "foo";
+</pre><p>جالب است که به برخی از تکنیک های استفاده شده در تعریف متد reverse در بالا توجه کنیم.
+برای مثال، متغیر reversedString درست همانند تمامی رشته های عادی جاوا اسکریپت تعریف شده است. این ویژگی به مدد تکنیکی به نام "پل زنی بدون عوارض" (toll-free bridging) به وجود آمده است که اجازه می دهد هر آبجکتی در جاوا اسکریپت مانند آرایه یا رشته، در آن واحد هم بتواند به عنوان یک آبجکت جاوا اسکریپت عادی عمل کند و هم به عنوان یک آبجکت کاپوچینو مورد استفاده قرار بگیرد. به این ترتیب یک رشته ی عادی جاوا اسکریپت هم می تواند به متد های CPString مانند length و charachterAtIndex پاسخ دهد و هم متد های اصلی جاوا اسکریپت مانند عملگر الحاق رشته (+) قابل استفاده باشند.</p><h2>حوزه‌ی دید</h2><p>در بیشتر اوقات، Objective J دارای همان قوانین حوزه‌ی دیدی می باشد که جاوا اسکریپت نیز دارد. متغیر هایی که با var تعریف نشده باشند، به متغیر های عمومی global تبدیل می شوند. در حالی که متغیر های تعریف شده با var دارای حوزه‌ی دید در سطح تابع / متد هستند. دو تا تفاوتی که نسبت به قوانین فوق وجود دارد، عبارت است از متغیر های instance و متغیر های حوزه ی فایل.
+متغیر های instance همانطور که قبلا هم در این مقاله دیدید، در درون بلاک @implementation تعریف می شوند. هنگامی که شما از این متغیر ها در درون کلاس تان استفاده می کنید، دارای حوزه‌ی دید در سطح شی هستند (عمومی نیستند، آن ها به هر یک از آبجکت ها تعلق دارند.) در صورتی که فراموش کنید یکی از متغیر های instance را تعریف کنید، با آن متغیر همانند یک متغیر عمومی برخورد خواهد شد همانند کدهای جاوا اسکریپت معمولی.
+متغیر های حوزه ی فایل، ویژگی جدیدی است که در Objective J تعریف شده است. هنگامی که شما یک متغیر را در خارج از یک تابع یا متد و با استفاده از کلمه ی کلیدی var تعریف می کنید، چنین متغیرهایی (که به آن ها ثابت static گفته می شود) دارای حوزه ی دید سطح فایل خواهند بود. این متغیر ها فقط توسط کدهای درون همان فایل قابل دسترسی خواهند بود. این ویژگی هنگامی مفید خواهد بود که می خواهید تعداد زیادی متغیر های اشترکی را ایجاد کنید و نیازی نیست که به متغیر های global متوسل شوید. در صورتی که یک فایل فقط شامل یک کلاس باشد، می توان متغیر های حوزه ی فایل که درآن فایل تعریف شده اند را همانند "متغیر های کلاس" تصور کرد.
+کد زیر یک مثال از قوانین اصلی حوزه‌ی دید در Objective J می باشد:</p><pre style="direction:ltr!important;text-align:ltr;font-family:consolas,tahoma!important;border-left:3px solid blue;padding-left:4px;margin-left:4px">
+globalScoped = "this becomes global";
+var fileScoped = "this stays scoped in the file";
+@implementation Foo : CPObject
+{
+  CPString objectScoped;
+}
+- (void)baz
+{
+  var methodScoped;
+  methodScoped = "function scope, declared with var";
+  anotherGlobal = "global scope, no var";
+  objectScoped = "still object scoped";
+  fileScoped = "still file scoped";
+}
+@end
+</pre><h2>جمع بندی</h2><p>این حاصل مرور ساده ی ما بر Objective J است. Objective J یک افزونه‌ی ساده و سر راست به زبان جاوا اسکریپت می باشد، و بیشتر توسعه دهندگان نباید هیچ گونه مشکلی برای آشنایی با این زبان داشته باشند.
+در زیر کد کامل مثال مطرح شده در مقاله ی فوق را می آوریم:</p><pre style="direction:ltr!important;text-align:ltr;font-family:consolas,tahoma!important;border-left:3px solid blue;padding-left:4px;margin-left:4px">
+@import &lt;Foundation/CPObject.j&gt;
+@implementation Person : CPObject
+{
+    CPString name;
+}
++ (id)personWithName:(CPString)aName
+{
+    return [[self alloc] initWithName:aName];
+}
+- (id)initWithName:(CPString)aName
+{
+    self = [super init];
+    name = aName;
+    return self;
+}
+- (void)setName:(CPString)aName
+{
+    name = aName;
+}
+- (CPString)name
+{
+    return name;
+}
+@end
+// Reversing Category for CPString
+import <foundation/cpstring.j>
+@implementation CPString (Reversing)
+- (CPString)reverse
+{
+    var reversedString = "",
+        index = [self length];
+    while(index--)
+        reversedString += [self characterAtIndex:index];
+    return reversedString;
+}
+@end
+// Here's some code that uses the class and category defined above.
+// Code outside a class declaration is global, and will be executed when
+// the file is imported, just like in C.
+var john = [Person personWithName:"John"];
+alert([john name]);
+[john setName:"Ralph"];
+alert("John changed his name to " + [john name] + " which is " + [[john name] reverse] + " backwards.");
+<p></pre></p><h5>مطالب مرتبط:</h5><ul><li><a href="/posts/1391/07/%D9%87%D9%85%D9%87-%DA%86%DB%8C%D8%B2-%D8%AF%D8%B1-%D9%85%D9%88%D8%B1%D8%AF-cappuccino-%D9%88-objective-j/">همه چیز در مورد Cappuccino و Objective J</a></li></ul></article></div><aside class="col-md-3 mt-4"><h3>Monthly Archive</h3><ul><li><a href="/month/1395-06/" title="All posts from 1395-06">1395-06</a> (1)</li><li><a href="/month/1395-01/" title="All posts from 1395-01">1395-01</a> (1)</li><li><a href="/month/1394-12/" title="All posts from 1394-12">1394-12</a> (3)</li><li><a href="/month/1394-08/" title="All posts from 1394-08">1394-08</a> (1)</li><li><a href="/month/1394-07/" title="All posts from 1394-07">1394-07</a> (1)</li><li><a href="/month/1394-03/" title="All posts from 1394-03">1394-03</a> (1)</li><li><a href="/month/1394-02/" title="All posts from 1394-02">1394-02</a> (1)</li><li><a href="/month/1393-12/" title="All posts from 1393-12">1393-12</a> (1)</li><li><a href="/month/1393-07/" title="All posts from 1393-07">1393-07</a> (1)</li><li><a href="/month/1393-06/" title="All posts from 1393-06">1393-06</a> (2)</li><li><a href="/month/1393-05/" title="All posts from 1393-05">1393-05</a> (2)</li><li><a href="/month/1393-04/" title="All posts from 1393-04">1393-04</a> (4)</li><li><a href="/month/1393-03/" title="All posts from 1393-03">1393-03</a> (5)</li><li><a href="/month/1393-02/" title="All posts from 1393-02">1393-02</a> (1)</li><li><a href="/month/1393-01/" title="All posts from 1393-01">1393-01</a> (4)</li><li><a href="/month/1392-12/" title="All posts from 1392-12">1392-12</a> (5)</li><li><a href="/month/1392-10/" title="All posts from 1392-10">1392-10</a> (5)</li><li><a href="/month/1392-06/" title="All posts from 1392-06">1392-06</a> (1)</li><li><a href="/month/1392-04/" title="All posts from 1392-04">1392-04</a> (1)</li><li><a href="/month/1392-02/" title="All posts from 1392-02">1392-02</a> (1)</li><li><a href="/month/1392-01/" title="All posts from 1392-01">1392-01</a> (5)</li><li><a href="/month/1391-11/" title="All posts from 1391-11">1391-11</a> (5)</li><li><a href="/month/1391-10/" title="All posts from 1391-10">1391-10</a> (4)</li><li><a href="/month/1391-09/" title="All posts from 1391-09">1391-09</a> (2)</li><li><a href="/month/1391-08/" title="All posts from 1391-08">1391-08</a> (3)</li><li><a href="/month/1391-07/" title="All posts from 1391-07">1391-07</a> (6)</li><li><a href="/month/1391-05/" title="All posts from 1391-05">1391-05</a> (1)</li><li><a href="/month/1391-04/" title="All posts from 1391-04">1391-04</a> (1)</li><li><a href="/month/1391-03/" title="All posts from 1391-03">1391-03</a> (2)</li><li><a href="/month/1391-02/" title="All posts from 1391-02">1391-02</a> (4)</li><li><a href="/month/1391-01/" title="All posts from 1391-01">1391-01</a> (6)</li><li><a href="/month/1390-12/" title="All posts from 1390-12">1390-12</a> (9)</li><li><a href="/month/1390-11/" title="All posts from 1390-11">1390-11</a> (8)</li><li><a href="/month/1390-10/" title="All posts from 1390-10">1390-10</a> (7)</li><li><a href="/month/1390-09/" title="All posts from 1390-09">1390-09</a> (4)</li><li><a href="/month/1390-08/" title="All posts from 1390-08">1390-08</a> (7)</li><li><a href="/month/1390-07/" title="All posts from 1390-07">1390-07</a> (14)</li><li><a href="/month/1390-06/" title="All posts from 1390-06">1390-06</a> (18)</li></ul></aside></div></div><footer id="footer-wrapper"><div id="footer-bottom-wrapper"><div class="container"><div class="row"><div class="col-12"><p dir="ltr">&copy; Copyright 2011-2022 * Ahmad Hejazee * All rights reserved.</p><small dir="ltr">Proudly Powered by Drupal 10 ;)</small></div></div></div></div></footer><script src="/lib/jQuery/jquery-3.6.0.min.js"></script>
+<script src="/lib/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script></body></html>

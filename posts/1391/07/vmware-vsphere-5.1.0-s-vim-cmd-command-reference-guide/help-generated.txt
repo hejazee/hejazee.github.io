@@ -1,0 +1,2521 @@
+### @author "Ahmad Hejazee"  -  http://www.hejazee.ir/
+### Some rights reserved
+### vim-cmd Commands: (for VMware ESXi 5.1.0)###
+### I have created this list by looking directly at the VMware ESXI 5.1.0 ssh console. ###
+
+  hbrsvc/vmreplica.abort
+      Usage: vmreplica.abort vmid
+
+Abort the creation of a consistent instance of the specified virtual machine
+
+  hbrsvc/vmreplica.pause
+      Usage: vmreplica.pause vmid
+
+Pause replication for a VM
+
+  hbrsvc/vmreplica.create
+      Usage: vmreplica.create vmid [instanceId]
+
+Create a consistent instance of the specified virtual machine using a light weight delta
+
+  hbrsvc/vmreplica.queryReplicationState
+      Usage: vmreplica.queryReplicationState vmid
+
+Query the state of the specified replication group
+  hbrsvc/vmreplica.disable
+      Usage: vmreplica.disable vmid
+
+Disable replication for the specified virtual machine
+
+  hbrsvc/vmreplica.reconfig
+      Usage: vmreplica.reconfig vmid [rpo] [destinationIPAddress] [destinationPort] [enableQuiescing] [enableOpportunistic]
+
+Re-configure replication for the specified virtual machine
+
+  hbrsvc/vmreplica.diskDisable
+      Usage: vmreplica.diskDisable vmid deviceKey
+
+Disable replication for the specified virtual machine disk
+
+  hbrsvc/vmreplica.resume
+      Usage: vmreplica.resume vmid
+
+Resume replication for a VM
+
+  hbrsvc/vmreplica.diskEnable
+      Usage: vmreplica.diskEnable vmid deviceKey [Disk Replication ID]
+
+Enable replication for the specified virtual machine disk, if replication is configured for the VM
+
+  hbrsvc/vmreplica.startOfflineInstance
+      Usage: vmreplica.startOfflineInstance vmid [instanceId]
+
+Start creating an instance for a powered-off VM
+
+  hbrsvc/vmreplica.enable
+      Usage: vmreplica.enable vmid rpo destinationIPAddress destinationPort [enableQuiescing] [enableOpportunistic] [VM Replication ID] [Disk Replication ID(s)]
+
+Enable replication for the specified virtual machine
+
+  hbrsvc/vmreplica.stopOfflineInstance
+      Usage: vmreplica.stopOfflineInstance vmid [instanceId]
+
+Stop replication for a powered-off VM
+
+  hbrsvc/vmreplica.getConfig
+      Usage: vmreplica.getConfig vmid
+
+Retrieve the replication configuration of the specified virtual machine
+
+  hbrsvc/vmreplica.sync
+      Usage: vmreplica.sync vmid
+
+Synchronize the disks of the specified virtual machine with their remote replicas
+
+  hbrsvc/vmreplica.getState
+      Usage: vmreplica.getState vmid
+
+Get the state of the specified replication group
+    internalsvc/perfcount/enumerate
+          Usage: enumerate registry_path
+
+Enumerate paths in the registry.
+
+    internalsvc/perfcount/query_execute
+          Usage: query_execute [OPTIONS] query_id
+
+Execute created query.
+
+Options:
+   --vmomi-output
+       Display output in verbose VMOMI mode.  false by default.
+No other display modifiers can be used with this option.
+
+   --sort-by-name
+       Sort results by name.  false by default.
+
+   --sort-by-value
+       Sort results by value.  false by default.
+
+   --name-range=int
+       Show only a range of bytes for the name.
+
+    internalsvc/perfcount/query_list
+          Usage: query_list
+
+List the queries that are associated with the performance counter registry
+
+    internalsvc/perfcount/query_regex
+          Usage: query_regex [OPTIONS] regex [case_sensitive]
+
+Query performance counter values by creating and executing a regex query.  Query will automatically be destroyed unless create-only flag is specified.  Use query_execute on query object to access results on created query.
+
+Options:
+   --create-only
+       Only create the query.  Do not execute or destroy.  false by default.
+
+   --vmomi-output
+       Display output in verbose VMOMI mode.  false by default.
+No other display modifiers can be used with this option.
+
+   --sort-by-name
+       Sort results by name.  false by default.
+
+   --sort-by-value
+       Sort results by value.  false by default.
+
+   --name-range=int
+       Show only a range of bytes for the name.
+
+    internalsvc/perfcount/query_destroy
+          Usage: query_destroy query_id
+
+Destroy created query.
+
+    internalsvc/perfcount/query_info
+          Usage: query_info query_id
+
+Get information about the performance counter query.
+
+    internalsvc/perfcount/query_names
+          Usage: query_names [OPTIONS] [counter0] [counter1] [counter2] [counter3] [counter5] [counter6] [counter7] [counter8] [counter9]
+
+Query performance counter values by creating and executing a names query.  Query will automatically be destroyed unless create-only flag is specified.  Use query_execute on query object to access results on created query.
+
+Options:
+   --create-only
+       Only create the query.  Do not execute or destroy.  false by default.
+
+   --vmomi-output
+       Display output in verbose VMOMI mode.  false by default.
+No other display modifiers can be used with this option.
+
+   --sort-by-name
+       Sort results by name.  false by default.
+
+   --sort-by-value
+       Sort results by value.  false by default.
+
+   --name-range=int
+       Show only a range of bytes for the name.
+
+    internalsvc/perfcount/scoreboard
+          Usage: Get the serialized object scoreboard.
+  internalsvc/host_mode_lock
+      Usage: host_mode_lock lock mode
+
+Acquires or releases a mode lock on the host system.
+
+  internalsvc/refresh
+      Usage: refresh [name]
+
+Refreshes the system.
+
+  internalsvc/set_log_level
+      Usage: set_log_level name logLevel recurse
+
+Set the level for a logger
+    internalsvc/vprobes/listGlobals
+          Usage: listGlobals vmid
+
+List VProbes global variables in the VM domain.
+
+    internalsvc/vprobes/listProbes
+          Usage: listProbes vmid
+
+List VProbes static probes in the VM domain.
+
+    internalsvc/vprobes/load
+          Usage: load vmid [destructiveMode] [script]
+
+Load a VProbes script.
+
+    internalsvc/vprobes/reset
+          Usage: reset vmid instanceid
+
+Reset a VProbes instance.
+
+    internalsvc/vprobes/version
+          Usage: version vmid
+
+Get VProbes version.
+
+  internalsvc/login
+      Usage: login [username] [password]
+
+Logs in to host, creating a new session.  If no password is specified, will
+use a local authentication mechanism.
+  internalsvc/refresh_consolenic
+      Usage: refresh_consolenic
+
+Refreshes the service console nic on the host system.
+
+  internalsvc/shutdown
+      Usage: shutdown
+
+Shutdown hostd service
+  internalsvc/access_address
+      Usage: access_address [address]
+
+Throw a general purpose exception
+
+  internalsvc/loglist
+      Usage: loglist [prefix]
+
+Get the list of loggers that can be configured
+  internalsvc/refresh_datastores
+      Usage: refresh_datastores
+
+Refreshes the datastore inventory on the host system.
+
+  internalsvc/throw_exception
+      Usage: throw_exception message
+
+Throw a general purpose exception
+
+  internalsvc/cold_quit
+      Usage: Just cold quit hostd
+  internalsvc/logout
+      Usage: logout
+
+Logs out from host, destroying existing session.
+  internalsvc/refresh_gateway
+      Usage: refresh_gateway
+
+Refreshes the vmkernel default gateway.
+
+  internalsvc/use_fds
+      Usage: use_fds [numFds]
+
+Use up a certain number of fds (or decrement the fds in use)
+
+  internalsvc/connect
+      Usage: connect [hostname[@thumbprint]] [port] [key] [cert] [product] [vimVersion]
+
+Connects to product (solo|vpxa|vpxd) listening at hostname on 
+TCP port port using a private key and a certificate.
+By default product is 'solo', hostname is 'localhost'.
+Port is 443.
+private key is at /etc/vmware/ssl/rui.key
+certificate is at /etc/vmware/ssl/rui.crt
+vimVersion is vim.version.version8.
+To disable SSL, use an empty key or certificate.
+  internalsvc/redirect_stderr
+      Usage: redirect_stderr file path
+
+Redirects stderr for hostd to a file.
+
+  internalsvc/refresh_network
+      Usage: refresh_network
+
+Refreshes the network configuration on the host system.
+
+  internalsvc/disconnect
+      Usage: disconnect
+
+Disconnects an already established connection.
+  internalsvc/redirect_stdout
+      Usage: redirect_stdout file_path [redirect_stderr]
+
+Redirects stdout for hostd to a file.
+
+  internalsvc/refresh_pnic
+      Usage: refresh_pnic pnic
+
+Refreshes the service console nic on the host system.
+
+  solo/connect
+      Usage: connect [hostname[@thumbprint]] [port] [key] [cert] [product] [vimVersion]
+
+Connects to product (solo|vpxa|vpxd) listening at hostname on 
+TCP port port using a private key and a certificate.
+By default product is 'solo', hostname is 'localhost'.
+Port is 443.
+private key is at /etc/vmware/ssl/rui.key
+certificate is at /etc/vmware/ssl/rui.crt
+vimVersion is vim.version.version8.
+To disable SSL, use an empty key or certificate.
+  solo/environment
+      Usage: environment
+
+Display the default vm environment on this host.
+  solo/logout
+      Usage: logout
+
+Logs out from host, destroying existing session.
+  solo/querycfgoptdesc
+      Usage: querycfgoptdesc
+
+Display the environment descriptors available on this host.
+  solo/disconnect
+      Usage: disconnect
+
+Disconnects an already established connection.
+  solo/login
+      Usage: login [username] [password]
+
+Logs in to host, creating a new session.  If no password is specified, will
+use a local authentication mechanism.
+  solo/querycfgopt
+      Usage: querycfgopt [key]
+
+Display the environment config option specified.
+  solo/registervm
+      Usage: registervm vm path [name] [resourcepool]
+
+registervm [cfg path] [name(optional)] [resourcepool(optional)]
+
+Register the vm
+
+  vmsvc/acquiremksticket
+      Usage: acquiremksticket vmid
+
+Acquire mks ticket.
+
+  vmsvc/get.snapshotinfo
+      Usage: get.snapshotinfo vmid
+
+Show the snapshot information for this virtual machine.
+
+  vmsvc/acquireticket
+      Usage: acquireticket vmid ticketType
+
+Acquire a virtual machine ticket.
+
+  vmsvc/get.spaceNeededForConsolidation
+      Usage: get.spaceNeededForConsolidation vmid
+
+Estimate the space needed to perform consolidation.
+
+  vmsvc/connect
+      Usage: connect [hostname[@thumbprint]] [port] [key] [cert] [product] [vimVersion]
+
+Connects to product (solo|vpxa|vpxd) listening at hostname on 
+TCP port port using a private key and a certificate.
+By default product is 'solo', hostname is 'localhost'.
+Port is 443.
+private key is at /etc/vmware/ssl/rui.key
+certificate is at /etc/vmware/ssl/rui.crt
+vimVersion is vim.version.version8.
+To disable SSL, use an empty key or certificate.
+  vmsvc/get.summary
+      Usage: get.summary vmid
+
+Retrieves and displays the listsummary status from the vm.
+
+  vmsvc/convert.toTemplate
+      Usage: convert.toTemplate vmid
+
+Convert the virtual machine to a template.
+
+  vmsvc/get.tasklist
+      Usage: get.tasklist vmid
+
+Get list of recent tasks on virtual machine.
+
+  vmsvc/convert.toVm
+      Usage: convert.toVm vmid
+
+Convert the template to a virtual machine.
+
+  vmsvc/getallvms
+      Usage: getallvms
+
+Get the list of virtual machines on the host.
+  vmsvc/createdummyvm
+      Usage: createdummyvm vm_name datastore_path
+
+Create a pre-configured dummy vm.
+
+  vmsvc/gethostconstraints
+      Usage: vmconstraints
+
+Retrieves and displays the constraints object for the host.
+  vmsvc/destroy
+      Usage: destroy vmid
+
+Deletes the vm.
+
+  vmsvc/login
+      Usage: login [username] [password]
+
+Logs in to host, creating a new session.  If no password is specified, will
+use a local authentication mechanism.
+  vmsvc/device.connection
+      Usage: device.connection vmid deviceKey connect
+
+Connect/Disconnect the virtual device specified
+
+  vmsvc/logout
+      Usage: logout
+
+Logs out from host, destroying existing session.
+  vmsvc/device.connusbdev
+      Usage: device.connusbdev vmid usbid
+
+Connect a USB device to this virtual machine.
+
+  vmsvc/message
+      Usage: message vmid [messageId] [messageChoice]
+
+Replies to the current pending question on the vm.
+
+  vmsvc/device.disconnusbdev
+      Usage: device.disconnusbdev vmid usbid
+
+Remove a disk from this virtual machine.
+
+  vmsvc/power.getstate
+      Usage: power.getstate vmid
+
+Retrieves the power state of the specified virtual machine.
+
+  vmsvc/device.diskadd
+      Usage: device.diskadd vmid size controller_number unit_number datastore
+
+Add a disk to this virtual machine.
+
+  vmsvc/power.hibernate
+      Usage: power.hibernate vmid
+
+Cause guest to go into standby/hibernate and suspend.
+
+  vmsvc/device.diskaddexisting
+      Usage: device.diskaddexisting vmid disk file controller number unit number
+
+Add an existing disk to this virtual machine.
+
+  vmsvc/power.off
+      Usage: power.off vmid
+
+Power off the specified virtual machine.
+
+  vmsvc/device.diskremove
+      Usage: device.diskremove vmid controller number unit number delete file
+
+Remove a disk from this virtual machine.
+
+  vmsvc/power.on
+      Usage: power.on vmid
+
+Power on the specified virtual machine.
+
+  vmsvc/device.getdevices
+      Usage: device.getdevices vmid
+
+Retrieves and displays the virtual devices for the vm.
+
+  vmsvc/power.reboot
+      Usage: power.reboot vmid
+
+Reboot the guest OS if tools is running.
+
+  vmsvc/device.toolsSyncSet
+      Usage: device.toolsSyncSet vmid new state
+
+Set whether tools sync to host is enabled for the virtual machine.
+
+  vmsvc/power.reset
+      Usage: power.reset vmid
+
+Reset the specified virtual machine.
+
+  vmsvc/device.vmiadd
+      Usage: device.vmiadd vmid
+
+Add the VMI ROM to the virtual machine.
+
+  vmsvc/power.shutdown
+      Usage: power.shutdown vmid
+
+Shutdown the guest OS
+
+  vmsvc/device.vmiremove
+      Usage: device.vmiremove vmid
+
+Remove the VMI ROM from the virtual machine.
+
+  vmsvc/power.suspend
+      Usage: power.suspend vmid
+
+Suspend the specified virtual machine.
+
+  vmsvc/devices.createnic
+      Usage: devices.createnic vmid unit number type network
+
+Add a NIC to this virtual machine.
+
+  vmsvc/power.suspendResume
+      Usage: power.suspendResume vmid
+
+Suspend & resume the specified virtual machine.
+
+  vmsvc/disconnect
+      Usage: disconnect
+
+Disconnects an already established connection.
+  vmsvc/queryftcompat
+      Usage: queryftcompat vmid
+
+Query FT compatibility for a VM.
+
+  vmsvc/get.capability
+      Usage: get.capability vmid
+
+Get list of capabilities for virtual machine.
+
+  vmsvc/reload
+      Usage: reload vmid
+
+Reload the virtual machine state from afresh.
+
+  vmsvc/get.config
+      Usage: get.config vmid
+
+Retrieves and displays the configuration object for the vm.
+
+  vmsvc/setscreenres
+      Usage: setscreenres vmid width height
+
+Sets the Console window's resolution.
+
+  vmsvc/get.config.cpuidmask
+      Usage: get.config.cpuidmask vmid
+
+Retrieves and displays the cpu id masks for this virtual machine
+  vmsvc/snapshot.create
+      Usage: snapshot.create vmid [snapshotName] [snapshotDescription] [includeMemory] [quiesced]
+
+Creates a snapshot for the vm.
+
+  vmsvc/get.configoption
+      Usage: get.configoption vmid
+
+Get the configuration options for this virtual machine.
+
+  vmsvc/snapshot.dumpoption
+      Usage: snapshot.dumpoption showconfig
+
+Set the snapshot dump option.
+
+  vmsvc/get.datastores
+      Usage: get.datastores vmid
+
+Show the list of datastores for this virtual machine.
+
+  vmsvc/snapshot.get
+      Usage: snapshot.get vmid
+
+gets the snapshot info for the vm.
+
+  vmsvc/get.disabledmethods
+      Usage: get.disabledmethods vmid
+
+Show the list of disabled methods on the virtual machine.
+
+  vmsvc/snapshot.remove
+      Usage: snapshot.remove vmid snapshotId [removeChildren]
+
+Remove a snapshot on the vm.
+
+  vmsvc/get.environment
+      Usage: get.environment vmid
+
+Retrieves the vm's environment browser.
+
+  vmsvc/snapshot.removeall
+      Usage: snapshot.removeall vmid
+
+Removes all the snapshots on the vm.
+
+  vmsvc/get.filelayout
+      Usage: get.filelayout vmid
+
+Show the list of files for this virtual machine.
+
+  vmsvc/snapshot.revert
+      Usage: snapshot.revert vmid snapshotId suppressPowerOff
+
+Revert to a snapshot on the vm.
+
+  vmsvc/get.filelayoutex
+      Usage: get.filelayoutex vmid
+
+Show the list of files for this virtual machine.
+
+  vmsvc/snapshot.setoption
+      Usage: snapshot.setoption [OPTIONS] vmid
+
+Config snapshot behavior on the vm.
+
+Options:
+   --locked=bool
+       Whether to lock the snapshot
+
+   --disabled=bool
+       whether to disable snapshot
+
+   --action=string
+       The snapshot power-off behavior
+
+  vmsvc/get.guest
+      Usage: get.guest vmid
+
+Get guest information
+
+  vmsvc/tools.cancelinstall
+      Usage: tools.cancelinstall vmid
+
+Cancel the tools installation process
+
+  vmsvc/get.guestheartbeatStatus
+      Usage: get.guestheartbeatStatus vmid
+
+Show the guest heartbeat status for this virtual machine.
+
+  vmsvc/tools.install
+      Usage: tools.install vmid
+
+Start the tools installation process
+
+  vmsvc/get.managedentitystatus
+      Usage: get.managedentitystatus vmid
+
+Show the status for the virtual machine.
+
+  vmsvc/tools.upgrade
+      Usage: tools.upgrade vmid [args]
+
+Upgrade VMware Tools in the virtual machine
+
+  vmsvc/get.networks
+      Usage: get.networks vmid
+
+Show the list of networks for this virtual machine.
+
+  vmsvc/unregister
+      Usage: unregister vmid
+
+Unregister the virtual machine
+
+  vmsvc/get.runtime
+      Usage: get.runtime vmid
+
+Get runtime information
+
+  vmsvc/upgrade
+      Usage: upgrade vmid [vm_hwversion]
+
+Upgrade the virtual hardware of the VM if possible.
+
+    hostsvc/advopt/options
+          Usage: Get the list of all supported options.
+    hostsvc/advopt/settings
+          Usage: Get the list of all current settings.
+    hostsvc/advopt/update
+          Usage: update key type value
+
+Update the value of an option.
+
+    hostsvc/advopt/view
+          Usage: view key
+
+Get a specific node or subtree of the option hierarchy.
+
+  hostsvc/enable_ssh
+      Usage: enable_ssh
+
+enable_ssh
+
+Enable SSH.
+
+  hostsvc/refresh_services
+      Usage: refresh_services
+
+refresh_services
+
+Refesh the host service state.
+
+    hostsvc/autostartmanager/autostart
+          Usage: autostart
+
+Starts up VMs in the AutoStart sequence
+    hostsvc/autostartmanager/get_autostartseq
+          Usage: Get the current VM Autostart sequence.
+    hostsvc/autostartmanager/update_defaults
+          Usage: update_defaults StartDelay [StopDelay] [StopAction] [WaitForHeartbeat]
+
+Updates AutoStart system defaults.
+
+    hostsvc/autostartmanager/autostop
+          Usage: autostop
+
+Shuts down VMs in the AutoStart sequence
+    hostsvc/autostartmanager/get_defaults
+          Usage: Get the AutoStart system defaults.
+    hostsvc/autostartmanager/enable_autostart
+          Usage: enable_autostart EnableAutoStart
+
+Enable or disable AutoStart.
+
+    hostsvc/autostartmanager/update_autostartentry
+          Usage: update_autostartentry VMId StartAction StartDelay StartOrder StopAction StopDelay WaitForHeartbeat
+
+Updates a single VM's AutoStart entry.
+
+  hostsvc/firewall_disable_ruleset
+      Usage: firewall_disable_ruleset ruleset
+
+disable_ruleset
+
+Disable a particular firewall ruleset.
+
+  hostsvc/reset_service
+      Usage: reset_service service
+
+reset_service
+
+Reset Service.
+
+    hostsvc/datastore/capabilities
+          Usage: List the capabilities supported by the datastore system.
+    hostsvc/datastore/remove
+          Usage: remove name
+
+Remove a datastore.
+
+    hostsvc/datastore/destroy
+          Usage: destroy name
+
+Destroy a datastore.
+
+    hostsvc/datastore/rename
+          Usage: rename name newname
+
+Rename a datastore.
+
+    hostsvc/datastore/info
+          Usage: info name
+
+Retrieve the information of a datastore by name.
+
+    hostsvc/datastore/summary
+          Usage: summary name
+
+Retrieve the summary of a datastore by name.
+
+    hostsvc/datastore/listsummary
+          Usage: List a summary of all datastores available.
+    hostsvc/datastore/vmfs_create
+          Usage: vmfs_create [OPTIONS] name devId volumeName blockSizeMb majorVersion head
+
+Add a VMFS datastore.
+
+Options:
+   --partition=int
+       Partition  number.
+
+   --startector=int
+       Start sector.
+
+   --endsector=int
+       End sector.
+
+   --typeid=fs_type
+       Type of data in the file system.
+
+   --logical=bool
+       If it is logical partition.
+
+   --attributes=byte
+       Partition attributes.
+
+   --partition2=int
+       Partition  number.
+
+   --startector2=int
+       Start sector.
+
+   --endsector2=int
+       End sector.
+
+   --typeid2=byte
+       Type of data in the file system.
+
+   --logical2=bool
+       If it is logical partition.
+
+   --attributes2=byte
+       Partition attributes.
+
+   --partition3=int
+       Partition  number.
+
+   --startector3=int
+       Start sector.
+
+   --endsector3=int
+       End sector.
+
+   --typeid3=byte
+       Type of data in the file system.
+
+   --logical3=bool
+       If it is logical partition.
+
+   --attributes3=byte
+       Partition attributes.
+
+   --extentIds=partition_list
+       List of partitions to extent the VMFS.
+
+    hostsvc/datastore/listvm
+          Usage: listvm name
+
+Retrieve the virtual machines stored on the datastore.
+
+    hostsvc/datastore/vmfs_extend
+          Usage: vmfs_extend [OPTIONS] name devId
+
+Extend a VMFS datastore.
+
+Options:
+   --partition=int
+       Partition  number.
+
+   --startector=int
+       Start sector.
+
+   --endsector=int
+       End sector.
+
+   --typeid=fs_type
+       Type of data in the file system.
+
+   --logical=bool
+       If it is logical partition.
+
+   --attributes=byte
+       Partition attributes.
+
+   --partition2=int
+       Partition  number.
+
+   --startector2=int
+       Start sector.
+
+   --endsector2=int
+       End sector.
+
+   --typeid2=byte
+       Type of data in the file system.
+
+   --logical2=bool
+       If it is logical partition.
+
+   --attributes2=byte
+       Partition attributes.
+
+   --partition3=int
+       Partition  number.
+
+   --startector3=int
+       Start sector.
+
+   --endsector3=int
+       End sector.
+
+   --typeid3=byte
+       Type of data in the file system.
+
+   --logical3=bool
+       If it is logical partition.
+
+   --attributes3=byte
+       Partition attributes.
+
+   --extentIds=partition_list
+       List of partitions to extent the VMFS.
+
+    hostsvc/datastore/localds_create
+          Usage: localds_create name localPath
+
+Add a local datastore.
+
+    hostsvc/datastore/vmfs_queryAvailableDisks
+          Usage: vmfs_queryAvailableDisks [datastore]
+
+Gets the list of disks available for creating or extending a vmfs datastore.
+
+    hostsvc/datastore/nas_create
+          Usage: nas_create name remoteHost remotePath readonly
+
+Add a NAS datastore.
+readonly is a boolean value, 1 for readonly and 0 for rw access.
+
+    hostsvc/datastore/vmfs_query_create_options
+          Usage: vmfs_query_create_options devName
+
+Queries options for creating a new VMFS datastore for a disk.
+
+    hostsvc/datastore/refresh
+          Usage: refresh name
+
+Refresh a datastore.
+
+    hostsvc/datastore/vmfs_query_extend_options
+          Usage: vmfs_query_extend_options vmfsDatastore devName [suppressExpandCandidates]
+
+Queries options for extending a new VMFS datastore for a disk.
+
+  hostsvc/firewall_enable_ruleset
+      Usage: firewall_enable_ruleset ruleset
+
+enable_ruleset
+
+Enable a particular firewall ruleset.
+
+  hostsvc/runtimeinfo
+      Usage: runtimeinfo
+
+Retrieves the host runtime information.
+    hostsvc/datastorebrowser/deleteFile
+          Usage: deleteFile BrowserType DatastorePath
+
+Deletes a file from the given datastore path.
+
+    hostsvc/datastorebrowser/list
+          Usage: list BrowserType BrwsrFrmDatastores
+
+Lists all the datastores.
+
+    hostsvc/datastorebrowser/searchsubfolders
+          Usage: searchsubfolders BrowserType DatastorePath
+
+Searches the given datastore path.
+
+    hostsvc/datastorebrowser/disksearch
+          Usage: disksearch DatastorePath
+
+Searches the given datastore path for disks.
+
+    hostsvc/datastorebrowser/search
+          Usage: search BrowserType DatastorePath
+
+Searches the given datastore path.
+
+  hostsvc/get_service_status
+      Usage: get_service_status service
+
+get_service_status
+
+Get Service Status.
+
+  hostsvc/set_hostid
+      Usage: set_hostid hostid
+
+Sets the host id that the following host configuration commands apply to.
+
+    hostsvc/firmware/backup_config
+          Usage: Backup the firmware configuration
+    hostsvc/firmware/reset_config
+          Usage: Reset the configuration to factory defaults
+    hostsvc/firmware/restore_config
+          Usage: restore_config force
+
+Restore the firmware configuration
+
+    hostsvc/firmware/sync_config
+          Usage: sync_config
+
+Sync the firmware configuration to persistent storage.
+  hostsvc/hostconfig
+      Usage: hostconfig
+
+Retrieves the host config managed object references.
+  hostsvc/standby_mode_enter
+      Usage: standby_mode_enter [timeout]
+
+Put the host in standby mode.
+
+      hostsvc/net/mockup/clear
+              Usage: clear
+
+Clears the mockup implementation for host networking.
+      hostsvc/net/mockup/pnic_remove
+              Usage: pnic_remove pnic
+
+Removes a physical network interface card.
+
+      hostsvc/net/mockup/pnic_add
+              Usage: pnic_add [OPTIONS] pnic pci_id
+
+Adds a virtual switch with the given name.
+
+Options:
+   --linkspeed-mb=physical_nic_mb
+       The speed of the physical NIC in MB.
+
+   --linkspeed-duplex=bool
+       The duplex setting of the physical NIC.
+
+      hostsvc/net/mockup/pnic_setactuallinkspeed
+              Usage: pnic_setactuallinkspeed [OPTIONS] pnic
+
+Sets and unsets the physical link speed configuration for a physical
+NIC.  Unsetting link speed effectively disconnects network connection.
+To unset, don't specify any options.
+Options:
+   --linkspeed-mb=physical_nic_mb
+       The speed of the physical NIC in MB.
+
+   --linkspeed-duplex=bool
+       The duplex setting of the physical NIC.
+
+    hostsvc/net/portgroup_remove
+          Usage: portgroup_remove vswitch portgroup
+
+Removes a portgroup from a virtual switch.
+
+      hostsvc/net/provider/test_abort
+              Usage: test_abort
+
+Test the abort transactional semantics of NetworkSystemProviderTrans.
+    hostsvc/net/portgroup_set
+          Usage: portgroup_set [OPTIONS] vswitch portgroup
+
+Sets the properties on a portgroup.
+
+Options:
+   --securepolicy-promisc=bool
+       Allow promiscuous mode.
+
+   --securepolicy-macchange=bool
+       Allow MAC address to be changed.
+
+   --securepolicy-forgedxmit=bool
+       Allow forged transmits.
+
+   --shapingpolicy-enabled=bool
+       Enabled shaper.
+
+   --shapingpolicy-average-bandwidth=int
+       Average bandwidth.
+
+   --shapingpolicy-peak-bandwidth=int
+       Peak bandwidth.
+
+   --shapingpolicy-burst-size=int
+       Burst size.
+
+   --nicorderpolicy-active=vmnic_list
+       List of active NICs.
+
+   --nicorderpolicy-standby=vmnic_list
+       Order in which failover should occur.
+
+   --failurecriteria-check-speed=failurecriteria-check-speed
+       Detecting failover using link speed check
+
+   --failurecriteria-speed=int
+       The speed for link speed check method
+
+   --failurecriteria-check-duplex=bool
+       Detecting failover using link duplex check
+
+   --failurecriteria-duplex=bool
+       The duplexity for link duplex check method
+
+   --failurecriteria-check-error=bool
+       Detecting failover using link error percentage
+
+   --failurecriteria-error=int
+       The error percentage for link error percentage check method
+
+   --failurecriteria-check-beacon=bool
+       Detecting failover using the beacon
+
+   --nicteaming-policy=nicteaming-policy
+       Nic-Teaming policy.
+
+   --nicteaming-reverse-policy=bool
+       Apply the teaming policy to inbound frames as well.
+
+   --nicteaming-notify-switch=bool
+       Notify switches when detects a link failure.
+
+   --nicteaming-rollingorder=bool
+       Whether or not to use rolling failover.
+
+   --offloadcaps-csum-offload=bool
+       Checksum offload
+
+   --offloadcaps-tcp-segment=bool
+       TCP segment offload
+
+   --offloadcaps-zerocopy-xmit=bool
+       Scatter gather
+
+   --portgroup-vlanid=int
+       VLAN identifier.
+
+   --portgroup-name=string
+       New portgroup identifier.
+
+    hostsvc/net/capabilities
+          Usage: capabilities
+
+Get the network capabilities.
+
+    hostsvc/net/portgroup_unsetpolicy
+          Usage: portgroup_unsetpolicy vswitch portgroup
+
+Unset all network policies on a portgroup.
+
+    hostsvc/net/config
+          Usage: config
+
+Get the network configuration.
+
+    hostsvc/net/query_networkhint
+          Usage: query_networkhint [OPTIONS]
+
+Request network hint information for one or more PhysicalNics.
+
+Options:
+   --pnic-names=string_list
+       List of physical nics to query.
+
+    hostsvc/net/config_append
+          Usage: config_append filename
+
+Appends a network configuration from a file and updates it.
+
+    hostsvc/net/refresh
+          Usage: refresh
+
+Refresh network system properties.
+
+    hostsvc/net/config_incremental_update
+          Usage: config_incremental_update [OPTIONS]
+
+Incremental update network configuration.
+
+Options:
+   --vswitch-remove=string_list
+       List of vswitches to remove.
+
+   --portgrp-remove=string_list
+       List of portgroups to remove.
+
+   --consolevnic-remove=string_list
+       List of console virtual nics to remove.
+
+   --vnic-remove=string_list
+       List of virtual nics to remove.
+
+    hostsvc/net/route_info
+          Usage: route_info
+
+Get the IP forwarding table.
+
+    hostsvc/net/config_load
+          Usage: config_load filename
+
+Loads a network configuration from a file and updates it.
+
+    hostsvc/net/route_set
+          Usage: route_set [OPTIONS]
+
+Sets the IP route configuration.
+
+Options:
+   --gateway=string
+       IPv4 address of default gateway.
+
+   --nic=Optional, specify nic to use.
+   --v6gateway=string
+       IPv6 address of default gateway.
+
+   --v6nic=Optional, specify nic to use.
+    hostsvc/net/config_save
+          Usage: config_save filename
+
+Get the network configuration and save it to a file.
+
+    hostsvc/net/set_v6stack
+          Usage: set_v6stack bool
+
+Enable or disable IPv6 networking.
+
+    hostsvc/net/console_route_set
+          Usage: console_route_set [OPTIONS]
+
+Sets the console IP route configuration.
+
+Options:
+   --gateway=string
+       IPv4 address of default gateway.
+
+   --nic=Optional, specify nic to use.
+   --v6gateway=string
+       IPv6 address of default gateway.
+
+   --v6nic=Optional, specify nic to use.
+    hostsvc/net/toggle_raw
+          Usage: toggle_raw
+
+toggle_raw
+
+Configure output to use use raw formatting output or not
+
+    hostsvc/net/consolevnic_add
+          Usage: consolevnic_add [OPTIONS] portgroup
+
+Adds a Service Console virtual NIC to the system.
+
+Options:
+   --ip-dhcp=bool
+       Enables or disables DHCP configuration.
+
+   --ip-address=ip_address
+       IP address.
+
+   --ip-subnet=ip_address
+       Subnet mask.
+
+   --dynamic-addrs=ip_addr_origin
+       Where to obtain address: dhcpv6, autoconf, both, none.
+
+   --ipv6-addresses=string_list
+       Provide IP address(es)[/prefix] separated by comma, prefix defaults to 64.
+
+   --replace=bool
+       replace existing manual v6 addresses, default is to merge
+
+    hostsvc/net/vnic_add
+          Usage: vnic_add [OPTIONS] portgroup
+
+Adds a virtual NIC to the system.
+
+Options:
+   --ip-dhcp=bool
+       Enables or disables DHCP configuration.
+
+   --ip-address=ip_address
+       IP address.
+
+   --ip-subnet=ip_address
+       Subnet mask.
+
+   --dynamic-addrs=ip_addr_origin
+       Where to obtain address: dhcpv6, autoconf, both, none.
+
+   --ipv6-addresses=string_list
+       Provide IP address(es)[/prefix] separated by comma, prefix defaults to 64.
+
+   --replace=bool
+       replace existing manual v6 addresses, default is to merge
+
+    hostsvc/net/consolevnic_info
+          Usage: consolevnic_info [consolevnic]
+
+Gets information about Service Console virtual NICs.
+
+    hostsvc/net/vnic_info
+          Usage: vnic_info [vnic]
+
+Gets information about virtual NICs.
+
+    hostsvc/net/consolevnic_remove
+          Usage: consolevnic_remove consolevnic
+
+Removes a Service Console virtual NIC.
+
+    hostsvc/net/vnic_remove
+          Usage: vnic_remove vnic
+
+Removes a virtual NIC.
+
+    hostsvc/net/consolevnic_set
+          Usage: consolevnic_set [OPTIONS] consolevnic
+
+Reconfigures IPv4 addressing on Service Console virtual NIC.
+
+Options:
+   --vnic-mac=string
+       Sets the mac address of this vnic.
+
+   --ip-dhcp=bool
+       Enables or disables DHCP configuration.
+
+   --ip-address=ip_address
+       IP address.
+
+   --ip-subnet=ip_address
+       Subnet mask.
+
+    hostsvc/net/vnic_set
+          Usage: vnic_set [OPTIONS] vnic
+
+Reconfigures IPv4 addressing on virtual NIC.
+
+Options:
+   --vnic-mac=string
+       Sets the mac address of this vnic.
+
+   --ip-dhcp=bool
+       Enables or disables DHCP configuration.
+
+   --ip-address=ip_address
+       IP address.
+
+   --ip-subnet=ip_address
+       Subnet mask.
+
+    hostsvc/net/consolevnic_setv6
+          Usage: consolevnic_setv6 [OPTIONS] consolevnic
+
+Reconfigures IPv6 Service Console virtual NIC on the system.
+
+Options:
+   --vnic-mac=string
+       Sets the mac address of this vnic.
+
+   --dynamic-addrs=ip_addr_origin
+       Where to obtain address: dhcpv6, autoconf, both, none.
+
+   --ipv6-addresses=string_list
+       Provide IP address(es)[/prefix] separated by comma, prefix defaults to 64.
+
+   --replace=bool
+       replace existing manual v6 addresses, default is to merge
+
+    hostsvc/net/vnic_setv6
+          Usage: vnic_setv6 [OPTIONS] vnic
+
+Change IPv6 addressing on a vmkernel nic.
+
+Options:
+   --vnic-mac=string
+       Sets the mac address of this vnic.
+
+   --dynamic-addrs=ip_addr_origin
+       Where to obtain address: dhcpv6, autoconf, both, none.
+
+   --ipv6-addresses=string_list
+       Provide IP address(es)[/prefix] separated by comma, prefix defaults to 64.
+
+   --replace=bool
+       replace existing manual v6 addresses, default is to merge
+
+    hostsvc/net/dns_info
+          Usage: dns_info
+
+Get the DNS configuration.
+
+    hostsvc/net/vswitch_add
+          Usage: vswitch_add vswitch
+
+Adds a virtual switch with the given name.
+
+    hostsvc/net/dns_set
+          Usage: dns_set [OPTIONS]
+
+Sets the DNS configuration.
+
+Options:
+   --dhcp=bool
+       Mandatory, Enables or disables automatic discovery of DNS configuration.
+
+   --dhcp-virtualnic=console_virtual_nic
+       if dhcp == true, nic which dhcp .
+
+   --hostname=string
+       If dhcp != true, Host name of host.
+
+   --domainname=string
+       If dhcp != true, Domain name of host.
+
+   --ip-addresses=string_list
+       List of DNS Server addresses, comma separated and no spaces.
+
+   --searchdomain=string_list
+       DNS search domains.
+
+    hostsvc/net/vswitch_info
+          Usage: vswitch_info [vswitch]
+
+Displays information about virtual switches.
+
+    hostsvc/net/dns_unset
+          Usage: dns_unset
+
+Unsets the DNS configuration.
+
+    hostsvc/net/vswitch_pnicinfo
+          Usage: vswitch_pnicinfo vswitch
+
+Displays information about the physical NICs bridged to a virtual switch.
+
+    hostsvc/net/dvs_info
+          Usage: dvs_info [dvs]
+
+Displays information about distributed virtual switches.
+
+    hostsvc/net/vswitch_remove
+          Usage: vswitch_remove vswitch
+
+Removes a virtual switch.
+
+    hostsvc/net/info
+          Usage: info
+
+Get the network information.
+
+    hostsvc/net/vswitch_setautobridge
+          Usage: vswitch_setautobridge vswitch
+
+Sets the bridge for this virtual switch to be the automatic bridge.
+
+    hostsvc/net/offload_capabilities
+          Usage: offload_capabilities
+
+Get the network offload capabilities.
+
+    hostsvc/net/vswitch_setbondbridge
+          Usage: vswitch_setbondbridge [OPTIONS] vswitch
+
+Sets the bridge for this virtual switch to be the bonded NIC bridge.
+
+Options:
+   --vsbridge-bond-pnics=physical_nic_list
+       List of physical NIC to which bond bridge is configured.
+
+   --vsbridge-bond-beacon-interval=int
+       Probe interval for beacon.  Zero to disable.
+
+    hostsvc/net/pnic_info
+          Usage: pnic_info [pnic]
+
+Sets and displays the IP configuration for a physical network.
+
+    hostsvc/net/vswitch_setnumports
+          Usage: vswitch_setnumports vswitch ports
+
+Sets the number of ports on the virtual switch.
+
+    hostsvc/net/pnic_setip
+          Usage: pnic_setip [OPTIONS] [pnic]
+
+Sets and displays the IP configuration for a physical network.
+
+Options:
+   --ip-dhcp=bool
+       Enables or disables DHCP configuration.
+
+   --ip-address=ip_address
+       IP address.
+
+   --ip-subnet=ip_address
+       Subnet mask.
+
+    hostsvc/net/vswitch_setpolicy
+          Usage: vswitch_setpolicy [OPTIONS] vswitch
+
+Changes the policies of a virtual switch.
+
+Options:
+   --securepolicy-promisc=bool
+       Allow promiscuous mode.
+
+   --securepolicy-macchange=bool
+       Allow MAC address to be changed.
+
+   --securepolicy-forgedxmit=bool
+       Allow forged transmits.
+
+   --shapingpolicy-enabled=bool
+       Enabled shaper.
+
+   --shapingpolicy-average-bandwidth=int
+       Average bandwidth.
+
+   --shapingpolicy-peak-bandwidth=int
+       Peak bandwidth.
+
+   --shapingpolicy-burst-size=int
+       Burst size.
+
+   --nicorderpolicy-active=vmnic_list
+       List of active NICs.
+
+   --nicorderpolicy-standby=vmnic_list
+       Order in which failover should occur.
+
+   --failurecriteria-check-speed=failurecriteria-check-speed
+       Detecting failover using link speed check
+
+   --failurecriteria-speed=int
+       The speed for link speed check method
+
+   --failurecriteria-check-duplex=bool
+       Detecting failover using link duplex check
+
+   --failurecriteria-duplex=bool
+       The duplexity for link duplex check method
+
+   --failurecriteria-check-error=bool
+       Detecting failover using link error percentage
+
+   --failurecriteria-error=int
+       The error percentage for link error percentage check method
+
+   --failurecriteria-check-beacon=bool
+       Detecting failover using the beacon
+
+   --nicteaming-policy=nicteaming-policy
+       Nic-Teaming policy.
+
+   --nicteaming-reverse-policy=bool
+       Apply the teaming policy to inbound frames as well.
+
+   --nicteaming-notify-switch=bool
+       Notify switches when detects a link failure.
+
+   --nicteaming-rollingorder=bool
+       Whether or not to use rolling failover.
+
+   --offloadcaps-csum-offload=bool
+       Checksum offload
+
+   --offloadcaps-tcp-segment=bool
+       TCP segment offload
+
+   --offloadcaps-zerocopy-xmit=bool
+       Scatter gather
+
+    hostsvc/net/pnic_setlinkspeed
+          Usage: pnic_setlinkspeed [OPTIONS] pnic
+
+Sets and unsets the link speed configuration for a physical NIC.
+Unsetting link speed effectively configures NIC to autonegotiate.
+To unset, don't specify any options.
+Options:
+   --linkspeed-mb=physical_nic_mb
+       The speed of the physical NIC in MB.
+
+   --linkspeed-duplex=bool
+       The duplex setting of the physical NIC.
+
+    hostsvc/net/vswitch_setsimplebridge
+          Usage: vswitch_setsimplebridge vswitch pnic
+
+Sets the bridge for this virtual switch to be the simple, single NIC bridge.
+
+    hostsvc/net/portgroup_add
+          Usage: portgroup_add [OPTIONS] vswitch portgroup [vlan]
+
+Adds a portgroup to a virtual switch.
+
+Options:
+   --securepolicy-promisc=bool
+       Allow promiscuous mode.
+
+   --securepolicy-macchange=bool
+       Allow MAC address to be changed.
+
+   --securepolicy-forgedxmit=bool
+       Allow forged transmits.
+
+   --shapingpolicy-enabled=bool
+       Enabled shaper.
+
+   --shapingpolicy-average-bandwidth=int
+       Average bandwidth.
+
+   --shapingpolicy-peak-bandwidth=int
+       Peak bandwidth.
+
+   --shapingpolicy-burst-size=int
+       Burst size.
+
+   --nicorderpolicy-active=vmnic_list
+       List of active NICs.
+
+   --nicorderpolicy-standby=vmnic_list
+       Order in which failover should occur.
+
+   --failurecriteria-check-speed=failurecriteria-check-speed
+       Detecting failover using link speed check
+
+   --failurecriteria-speed=int
+       The speed for link speed check method
+
+   --failurecriteria-check-duplex=bool
+       Detecting failover using link duplex check
+
+   --failurecriteria-duplex=bool
+       The duplexity for link duplex check method
+
+   --failurecriteria-check-error=bool
+       Detecting failover using link error percentage
+
+   --failurecriteria-error=int
+       The error percentage for link error percentage check method
+
+   --failurecriteria-check-beacon=bool
+       Detecting failover using the beacon
+
+   --nicteaming-policy=nicteaming-policy
+       Nic-Teaming policy.
+
+   --nicteaming-reverse-policy=bool
+       Apply the teaming policy to inbound frames as well.
+
+   --nicteaming-notify-switch=bool
+       Notify switches when detects a link failure.
+
+   --nicteaming-rollingorder=bool
+       Whether or not to use rolling failover.
+
+   --offloadcaps-csum-offload=bool
+       Checksum offload
+
+   --offloadcaps-tcp-segment=bool
+       TCP segment offload
+
+   --offloadcaps-zerocopy-xmit=bool
+       Scatter gather
+
+    hostsvc/net/vswitch_unsetbridge
+          Usage: vswitch_unsetbridge vswitch
+
+Unsets the bridge for this virtual switch.
+
+  hostsvc/hosthardware
+      Usage: hosthardware
+
+Retrieves the host hardware information.
+  hostsvc/standby_mode_exit
+      Usage: standby_mode_exit [timeout]
+
+Take the host out of standby mode.
+
+    hostsvc/rsrc/create
+          Usage: create [OPTIONS] poolId poolName
+
+Create a child pool with default resource settings under the specified pool.
+
+Options:
+   --cpu-min=int
+       CPU minimum (in MHz).
+
+   --cpu-min-expandable=bool
+       Can pool borrow CPU resources from parent?
+
+   --cpu-max=int
+       CPU maximum (in MHz).
+
+   --cpu-shares=string
+       CPU shares (low/normal/high/<custom>).
+
+   --mem-min=int
+       Memory minimum (in MB).
+
+   --mem-min-expandable=bool
+       Can pool borrow memory resources from parent?
+
+   --mem-max=int
+       Memory maximum (in MB).
+
+   --mem-shares=string
+       Memory shares (low/normal/high/<custom>).
+
+    hostsvc/rsrc/pool_config_get
+          Usage: pool_config_get poolId
+
+Get the configuration of the specified pool.
+
+    hostsvc/rsrc/pools_get
+          Usage: pools_get poolId
+
+Get the list of pools nested within the specified pool.
+
+    hostsvc/rsrc/vm_config_set
+          Usage: vm_config_set [OPTIONS] vmCfgPath
+
+Update the configuration of the specified virtual machine.
+
+Options:
+   --cpu-min=int
+       CPU minimum (in MHz).
+
+   --cpu-min-expandable=bool
+       Can pool borrow CPU resources from parent?
+
+   --cpu-max=int
+       CPU maximum (in MHz).
+
+   --cpu-shares=string
+       CPU shares (low/normal/high/<custom>).
+
+   --mem-min=int
+       Memory minimum (in MB).
+
+   --mem-min-expandable=bool
+       Can pool borrow memory resources from parent?
+
+   --mem-max=int
+       Memory maximum (in MB).
+
+   --mem-shares=string
+       Memory shares (low/normal/high/<custom>).
+
+    hostsvc/rsrc/destroy
+          Usage: destroy poolId
+
+Destroy the specified resource pool, reparenting any VMs to its parent.
+
+    hostsvc/rsrc/pool_config_set
+          Usage: pool_config_set [OPTIONS] poolId
+
+Update the configuration of the specified pool.
+
+Options:
+   --cpu-min=int
+       CPU minimum (in MHz).
+
+   --cpu-min-expandable=bool
+       Can pool borrow CPU resources from parent?
+
+   --cpu-max=int
+       CPU maximum (in MHz).
+
+   --cpu-shares=string
+       CPU shares (low/normal/high/<custom>).
+
+   --mem-min=int
+       Memory minimum (in MB).
+
+   --mem-min-expandable=bool
+       Can pool borrow memory resources from parent?
+
+   --mem-max=int
+       Memory maximum (in MB).
+
+   --mem-shares=string
+       Memory shares (low/normal/high/<custom>).
+
+    hostsvc/rsrc/rename
+          Usage: rename poolId poolName
+
+Renames the specified pool
+    hostsvc/rsrc/vms_get
+          Usage: vms_get poolId
+
+Get the list of VMs within the specified pool.
+
+    hostsvc/rsrc/destroy_children
+          Usage: destroy_children poolId
+
+Destroy the child pools of the specified pool, reparenting any VMs to this pool.
+
+    hostsvc/rsrc/pool_runtime_get
+          Usage: pool_runtime_get poolId
+
+Get the runtime info for the specified pool.
+
+    hostsvc/rsrc/vm_config_get
+          Usage: vm_config_get vmCfgPath
+
+Get the configuration of the specified virtual machine.
+
+  hostsvc/hostsummary
+      Usage: hostsummary
+
+Retrieves the host summary information.
+  hostsvc/start_esx_shell
+      Usage: start_esx_shell
+
+start_esx_shell
+
+Start ESX Shell.
+
+      hostsvc/storage/diagnostic/activate
+              Usage: activate diskName partition
+
+Activate a vmkernel diagnostic paritition.
+
+      hostsvc/storage/diagnostic/get_active
+              Usage: Get the active vmkernel diagnostic partition information.
+      hostsvc/storage/diagnostic/query_create_option
+              Usage: query_create_option storage-type diagnostic-type
+
+Retrieve the list of disks that can be used to contain a diagnostic partition.
+
+      hostsvc/storage/diagnostic/create
+              Usage: create diskName storage-type
+
+Create a diagnostic partition according to specification.
+
+      hostsvc/storage/diagnostic/query_available
+              Usage: Retrieve the list of available diagnostic partitions.
+      hostsvc/storage/diagnostic/deactivate
+              Usage: deactivate
+
+Deactivate a vmkernel diagnostic paritition.
+
+      hostsvc/storage/diagnostic/query_create_desc
+              Usage: query_create_desc diskName diagnostic-type
+
+Query for the diagnostic creation description for a disk.
+
+    hostsvc/storage/multipath_lun_setpolicy
+          Usage: multipath_lun_setpolicy lunId policy prefer
+
+Set the multipath policy for a lun.
+
+      hostsvc/storage/mockup/clear
+              Usage: clear
+
+Clears the mockup implementation for host storage configuration.
+      hostsvc/storage/mockup/scsidisk_add
+              Usage: scsidisk_add [OPTIONS] lunId vmDeviceName blocks blocksize canonicalName
+
+Adds a physical SCSI disk.
+
+Options:
+   --canonicalName=scsi_lun_vmhba
+       Canonical vmhba name of the SCSI device.
+
+   --vendor=string
+       Vendor.
+
+   --model=string
+       Model.
+
+   --revision=string
+       SCSI device revision.
+
+   --level=int
+       SCSI level.
+
+   --status=string
+       Operational status.
+
+   --serialNumber=string
+       Serial number.
+
+   --queueDepth=int
+       Queue depth.
+
+      hostsvc/storage/mockup/topology_add
+              Usage: topology_add hba target lun lunId
+
+Adds topology entry from HBA through target to a LUN
+
+      hostsvc/storage/mockup/hostbusadapter_add
+              Usage: hostbusadapter_add [OPTIONS] id transportType pci_id
+
+Adds a host bus adapter.
+
+Options:
+   --bus=int
+       Bus number of the host bus adapter.
+
+   --status=string
+       Operational status of host bus adapter.
+
+   --model=string
+       Model of host bus adapter.
+
+   --driver=string
+       Device driver of host bus adapter.
+
+      hostsvc/storage/mockup/scsidisk_remove
+              Usage: scsidisk_remove devname
+
+Removes a physical disk.
+
+      hostsvc/storage/mockup/topology_remove
+              Usage: topology_remove hba target lun lunId
+
+Removes topology entry.
+
+      hostsvc/storage/mockup/hostbusadapter_remove
+              Usage: hostbusadapter_remove id
+
+Removes a SCSI protocol controller.
+
+      hostsvc/storage/mockup/scsilun_add
+              Usage: scsilun_add [OPTIONS] lunId scsiType vmScsiType vmDeviceName
+
+Adds a physical SCSI LUN.  LUN must not be a disk.
+
+Options:
+   --canonicalName=scsi_lun_vmhba
+       Canonical vmhba name of the SCSI device.
+
+   --vendor=string
+       Vendor.
+
+   --model=string
+       Model.
+
+   --revision=string
+       SCSI device revision.
+
+   --level=int
+       SCSI level.
+
+   --status=string
+       Operational status.
+
+   --serialNumber=string
+       Serial number.
+
+   --queueDepth=int
+       Queue depth.
+
+      hostsvc/storage/mockup/multipath_path_activate
+              Usage: multipath_path_activate path
+
+Activate an enabled path for a lun.
+
+      hostsvc/storage/mockup/scsilun_remove
+              Usage: scsilun_remove lunId
+
+Removes a physical SCSI LUN.  LUN must not be a disk.
+
+    hostsvc/storage/multipath_path_disable
+          Usage: multipath_path_disable path
+
+Disable an enabled path for a lun.
+
+      hostsvc/storage/provider/device_info
+              Usage: device_info
+
+Get storage device information through provider.
+      hostsvc/storage/provider/enable_stack_trace
+              Usage: enable_stack_trace
+
+Get storage device information through provider.
+      hostsvc/storage/provider/fs_info
+              Usage: fs_info
+
+Get storage device information through provider.
+    hostsvc/storage/multipath_path_enable
+          Usage: multipath_path_enable path
+
+Enable a disabled path for a Lun.
+
+    hostsvc/storage/datastore_browser_search
+          Usage: datastore_browser_search datastore
+
+Search for files using the datastore browser.
+
+    hostsvc/storage/partition_get
+          Usage: partition_get devname
+
+Get the partition specification of a physical disk.
+
+    hostsvc/storage/fs_info
+          Usage: fs_info
+
+info
+Get the file system volume information.
+
+    hostsvc/storage/partition_layout_add
+          Usage: partition_layout_add devname startBlock endBlock partitionType
+
+Add a partition to a physical disk using layout format.
+
+    hostsvc/storage/hba_info
+          Usage: hba_info
+
+Get storage vmhba information.
+
+    hostsvc/storage/partition_layout_get
+          Usage: partition_layout_get devname
+
+Get the partition layout of a physical disk.
+
+    hostsvc/storage/hba_rescan
+          Usage: hba_rescan id
+
+Set the iSCSI name for an iSCSI Hba.
+
+    hostsvc/storage/partition_layout_set
+          Usage: partition_layout_set devname layout
+
+Set the partition layout on the disk.
+partition_layout_set /vmfs/devices/disk/vml.8888  0-1000-vmfs:1001-5000-vmfs:
+    hostsvc/storage/info
+          Usage: info
+
+Get the storage system information.
+    hostsvc/storage/partition_remove
+          Usage: partition_remove devname int
+
+Remove a partition from a physical disk.
+
+    hostsvc/storage/iscsi_add_send_target
+          Usage: iscsi_add_send_target iSCSIID address [port]
+
+Add an iSCSI Send target entry for an iSCSI Hba.
+
+    hostsvc/storage/partition_spec_add
+          Usage: partition_spec_add [OPTIONS] devname
+
+Add a partition to a physical disk using specification format.
+
+Options:
+   --partition=int
+       Partition  number.
+
+   --startector=int
+       Start sector.
+
+   --endsector=int
+       End sector.
+
+   --typeid=fs_type
+       Type of data in the file system.
+
+   --logical=bool
+       If it is logical partition.
+
+   --attributes=byte
+       Partition attributes.
+
+    hostsvc/storage/iscsi_add_static_target
+          Usage: iscsi_add_static_target iSCSIID address name [port]
+
+Add an iSCSI static target entry for an iSCSI Hba.
+
+    hostsvc/storage/partition_spec_get
+          Usage: partition_spec_get devname
+
+Get the partition specification of a physical disk.
+
+    hostsvc/storage/iscsi_disable_chap
+          Usage: iscsi_disable_chap iSCSIID
+
+Disable CHAP for an iSCSI Hba.
+
+    hostsvc/storage/refresh
+          Usage: refresh
+
+Refresh storage system properties.
+
+    hostsvc/storage/iscsi_discovery
+          Usage: iscsi_discovery iSCSIID sendTargetsEnabled staticTargetsEnabled
+
+Update discovery settings for an iSCSI Hba.
+
+    hostsvc/storage/scsilun_info
+          Usage: scsilun_info
+
+Get storage vmhba information.
+
+    hostsvc/storage/iscsi_enable_chap
+          Usage: iscsi_enable_chap iSCSIID name secret
+
+Enable CHAP for an iSCSI Hba.
+
+    hostsvc/storage/software_iscsi_enabled
+          Usage: software_iscsi_enabled enabled
+
+Add an iSCSI Send target entry for an iSCSI Hba.
+
+    hostsvc/storage/iscsi_ip_config
+          Usage: iscsi_ip_config iSCSIID address netmask gateway dns1 [dns2]
+
+Update IP settings for an iSCSI Hba.
+
+    hostsvc/storage/topology_info
+          Usage: topology_info
+
+Get storage topology information.
+
+    hostsvc/storage/iscsi_ip_use_dhcp
+          Usage: iscsi_ip_use_dhcp iSCSIID
+
+Configure an iSCSI Hba to use DHCP for its IP configuration.
+
+    hostsvc/storage/upgrade_vm_layout
+          Usage: upgrade_vm_layout
+
+Relayout all legacy Vms from COS to a VMFS volume.
+
+    hostsvc/storage/iscsi_remove_send_target
+          Usage: iscsi_remove_send_target iSCSIID address [port]
+
+Remove an iSCSI send target for an iSCSI Hba.
+
+    hostsvc/storage/vmfs_attach_extent
+          Usage: vmfs_attach_extent VmfsName scsiDiskName partitionNum
+
+Extend the VMFS by attaching a new extent.
+
+    hostsvc/storage/iscsi_remove_static_target
+          Usage: iscsi_remove_static_target iSCSIID address name [port]
+
+Remove an iSCSI static target for an iSCSI Hba.
+
+    hostsvc/storage/vmfs_format
+          Usage: vmfs_format volumeName blockSizeMb majorVersion scsiDiskId partitionNum
+
+Format a new VMFS on a scsi partition.
+
+    hostsvc/storage/iscsi_set_alias
+          Usage: iscsi_set_alias iSCSIID alias
+
+Set the iSCSI name for an iSCSI Hba.
+
+    hostsvc/storage/vmfs_rescan
+          Usage: vmfs_rescan
+
+Rescan the vmfs file system volume information.
+
+    hostsvc/storage/iscsi_set_name
+          Usage: iscsi_set_name iSCSIID name
+
+Set the iSCSI name for an iSCSI Hba.
+
+    hostsvc/storage/vmfs_upgrade
+          Usage: vmfs_upgrade VmfsName
+
+Upgrade a VMFS2 volume to VMFS3.
+
+    hostsvc/storage/multipath_info
+          Usage: multipath_info
+
+Get storage multipath information.
+
+  hostsvc/login
+      Usage: login [username] [password]
+
+Logs in to host, creating a new session.  If no password is specified, will
+use a local authentication mechanism.
+  hostsvc/start_service
+      Usage: start_service service
+
+start_service
+
+Start Service.
+
+    hostsvc/summary/fsvolume
+          Usage: fsvolume
+
+Get file system volume information.
+
+    hostsvc/summary/hba
+          Usage: hba
+
+Get storage vmhba information.
+
+    hostsvc/summary/scsilun
+          Usage: scsilun
+
+Get storage LUN information.
+
+  hostsvc/logout
+      Usage: logout
+
+Logs out from host, destroying existing session.
+  hostsvc/start_ssh
+      Usage: start_ssh
+
+start_ssh
+
+Start SSH.
+
+    hostsvc/vmotion/ipconfig_get
+          Usage: Get the current IP configuration of the VMotion NIC.
+    hostsvc/vmotion/ipconfig_set
+          Usage: ipconfig_set [OPTIONS]
+
+Set the current IP configuration of the VMotion NIC.
+
+Options:
+   --ip-dhcp=bool
+       Enables or disables DHCP configuration.
+
+   --ip-address=ip_address
+       IP address.
+
+   --ip-subnet=ip_address
+       Subnet mask.
+
+    hostsvc/vmotion/netconfig_get
+          Usage: Get the VMotion network configuration.
+    hostsvc/vmotion/vnic_set
+          Usage: vnic_set vnic
+
+Select a VirtualNic to be used as the VMotion NIC.
+
+    hostsvc/vmotion/vnic_unset
+          Usage: vnic_unset
+
+Unconfigure a VirtualNic to be used as the VMotion NIC.
+
+  hostsvc/maintenance_mode_enter
+      Usage: maintenance_mode_enter [timeout]
+
+Put the host in maintenace mode.
+
+  hostsvc/stop_esx_shell
+      Usage: stop_esx_shell
+
+stop_esx_shell
+
+Stop ESX Shell.
+
+  hostsvc/connect
+      Usage: connect [hostname[@thumbprint]] [port] [key] [cert] [product] [vimVersion]
+
+Connects to product (solo|vpxa|vpxd) listening at hostname on 
+TCP port port using a private key and a certificate.
+By default product is 'solo', hostname is 'localhost'.
+Port is 443.
+private key is at /etc/vmware/ssl/rui.key
+certificate is at /etc/vmware/ssl/rui.crt
+vimVersion is vim.version.version8.
+To disable SSL, use an empty key or certificate.
+  hostsvc/maintenance_mode_exit
+      Usage: maintenance_mode_exit [timeout]
+
+Take the host out of maintenance mode.
+
+  hostsvc/stop_service
+      Usage: stop_service service
+
+stop_service
+
+Stop Service.
+
+  hostsvc/cpuinfo
+      Usage: cpuinfo [hyperthreadCfg]
+
+Get the CPU information.  If hyperthreadCfg is specified, sets configuration
+for hyperthreading.  Valid values include 'true' and 'false'.
+  hostsvc/pci_add
+      Usage: pci_add [OPTIONS] BusID SlotID FunctionID DeviceName
+
+Adds a physical PCI device.
+
+Options:
+   --classId=int
+       Class ID.
+
+   --vendorId=int
+       Vendor ID.
+
+   --vendorName=string
+       Vendor Name.
+
+   --deviceId=int
+       Device Id.
+
+  hostsvc/stop_ssh
+      Usage: stop_ssh
+
+stop_ssh
+
+Stop SSH.
+
+  hostsvc/disable_esx_shell
+      Usage: disable_esx_shell
+
+disable_esx_shell
+
+Disable ESX Shell.
+
+  hostsvc/pci_remove
+      Usage: pci_remove Pci ID
+
+Removes a physical PCI device.
+
+  hostsvc/task_list
+      Usage: task_list
+
+Get list of recent tasks on virtual machine.
+
+  hostsvc/disable_ssh
+      Usage: disable_ssh
+
+disable_ssh
+
+Disable SSH.
+
+  hostsvc/queryconnectioninfo
+      Usage: queryconn
+
+Query for connection information from the host.
+  hostsvc/updateSSLThumbprintsInfo
+      Usage: updateSSLThumbprintsInfo optype ownertag thumbprints
+
+Update the host's SSL thumbprint registry.
+Use empty thumbprints to clear thumbprints from an owner tag.
+Use empty thumbprints and empty owner tag to clear everything.
+
+  hostsvc/disconnect
+      Usage: disconnect
+
+Disconnects an already established connection.
+  hostsvc/querydisabledmethods
+      Usage: querydisabled
+
+Query for disabled methods on the host.
+  hostsvc/enable_esx_shell
+      Usage: enable_esx_shell
+
+enable_esx_shell
+
+Enable ESX Shell.
+
+  hostsvc/refresh_firewall
+      Usage: refresh_firewall
+
+refresh_firewall
+
+Refesh the firewall state.
+
+  proxysvc/add_np_service
+      Usage: add_np_service namespace accessMode pipeName
+
+Adds a given Named Pipe service to the proxy service list.
+
+  proxysvc/disconnect
+      Usage: disconnect
+
+Disconnects an already established connection.
+  proxysvc/port_info
+      Usage: port_info
+
+Display the ports that the proxy is listening on.
+
+  proxysvc/add_tcp_service
+      Usage: add_tcp_service namespace accessMode hostName port
+
+Adds a given TCP service to the proxy service list.
+
+  proxysvc/login
+      Usage: login [username] [password]
+
+Logs in to host, creating a new session.  If no password is specified, will
+use a local authentication mechanism.
+  proxysvc/remove_service
+      Usage: remove_service namespace accessMode
+
+Removes a specified service from the Proxy service list..
+
+  proxysvc/connect
+      Usage: connect [hostname[@thumbprint]] [port] [key] [cert] [product] [vimVersion]
+
+Connects to product (solo|vpxa|vpxd) listening at hostname on 
+TCP port port using a private key and a certificate.
+By default product is 'solo', hostname is 'localhost'.
+Port is 443.
+private key is at /etc/vmware/ssl/rui.key
+certificate is at /etc/vmware/ssl/rui.crt
+vimVersion is vim.version.version8.
+To disable SSL, use an empty key or certificate.
+  proxysvc/logout
+      Usage: logout
+
+Logs out from host, destroying existing session.
+  proxysvc/service_list
+      Usage: service_list
+
+Get the list of services being proxied.
+
+    vimsvc/auth/entity_permission_add
+          Usage: entity_permission_add managed_entity user isGroup roleName propagate
+
+Add permission rule for an entity.
+
+    vimsvc/auth/lockdown_mode_enter
+          Usage: lockdown_mode_enter
+
+Enter lockdown mode.
+
+    vimsvc/auth/role_permissions
+          Usage: role_permissions roleName
+
+Gets defined permissions associated with a role.
+
+    vimsvc/auth/entity_permission_remove
+          Usage: entity_permission_remove managed_entity user [isGroup]
+
+Add permission rule for an entity.
+
+    vimsvc/auth/lockdown_mode_exit
+          Usage: lockdown_mode_exit
+
+Exit lockdown mode.
+
+    vimsvc/auth/role_remove
+          Usage: role_remove roleName [failIfUsed]
+
+Remove a named role.
+
+    vimsvc/auth/entity_permissions
+          Usage: entity_permissions managed_entity [effective]
+
+Gets defined or effective permissions for an entity.
+
+    vimsvc/auth/permissions
+          Usage: permissions
+
+Get all the permissions defined in the system.
+
+    vimsvc/auth/roles
+          Usage: roles
+
+Get the list of currently defined roles.
+
+    vimsvc/auth/lockdown_is_enabled
+          Usage: lockdown_is_enabled
+
+Checks if lockdown mode is enabled.
+
+    vimsvc/auth/privileges
+          Usage: privileges
+
+Get the list of system-defined privileges.
+
+    vimsvc/auth/lockdown_is_possible
+          Usage: lockdown_is_possible
+
+Checks if lockdown mode can be entered.
+
+    vimsvc/auth/role_add
+          Usage: role_add roleName [priv0] [priv1] [priv2] [priv3] [priv4]
+
+Add a named role with the following privileges.
+
+  vimsvc/license
+      Usage: license [OPTIONS]
+
+Control License Subsystem.
+Options:
+   --show
+       Display license info.
+
+   --set=string
+       Set license serial number and optionally append /sourceId.
+
+  vimsvc/property_dump
+      Usage: property_dump [file] [filteronly]
+
+Gathers a dump of properties from the property collector.
+
+  vimsvc/task_info
+      Usage: task_info id
+
+Get information about a task.
+
+  vimsvc/connect
+      Usage: connect [hostname[@thumbprint]] [port] [key] [cert] [product] [vimVersion]
+
+Connects to product (solo|vpxa|vpxd) listening at hostname on 
+TCP port port using a private key and a certificate.
+By default product is 'solo', hostname is 'localhost'.
+Port is 443.
+private key is at /etc/vmware/ssl/rui.key
+certificate is at /etc/vmware/ssl/rui.crt
+vimVersion is vim.version.version8.
+To disable SSL, use an empty key or certificate.
+  vimsvc/login
+      Usage: login [username] [password]
+
+Logs in to host, creating a new session.  If no password is specified, will
+use a local authentication mechanism.
+  vimsvc/task_cancel
+      Usage: task_cancel id
+
+Cancel a task.
+
+  vimsvc/task_list
+      Usage: task_list
+
+Get list of recent tasks.
+
+  vimsvc/disconnect
+      Usage: disconnect
+
+Disconnects an already established connection.
+  vimsvc/logout
+      Usage: logout
+
+Logs out from host, destroying existing session.
+  vimsvc/task_description
+      Usage: task_description
+
+Get task descriptions.
+
+help
+  Invalid command 'help'.
