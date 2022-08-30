@@ -16,7 +16,11 @@ UPDATE mysql.user SET password=PASSWORD('My Password') WHERE user='root';
 FLUSH PRIVILEGES;
 quit</pre><p>اکنون پسورد root ریست شده است. کافی است از حالت safe خارج شویم و Mysql را در حالت عادی راه اندازی کنیم.</p><pre class="brush: bash;fontsize: 100; first-line: 1;">killall -9 mysqld_safe
 killall -9 mysqld
-<p>/sbin/service mysqld start</pre></p></article><div id="comments"><div id="disqus_thread"></div><script type="application/javascript">
+<p>/sbin/service mysqld start</pre></p></article><div id="comments"><script>
+      var disqus_config = function () { 
+        this.language = "fa";
+      };
+    </script><div id="disqus_thread"></div><script type="application/javascript">
     window.disqus_config = function () {
     
     

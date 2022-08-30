@@ -21,7 +21,11 @@ sudo service apache2 reload
   DocumentRoot "E:/xampp/htdocs/www.test.com"
   ServerName test.com
   ServerAlias www.test.com
-&lt;/VirtualHost&gt;</pre><p dir="rtl">*:80 آدرس IP و شماره پورتی است این VirtualHost بر روی آن کار می کند. * به این معنی است که بر روی تمام IP ها کار می کند.</p><p dir="rtl">ServerName مشخص می کند این VirtualHost برای سایت test.com است. یعنی اگر مرورگر هدر Host را با مقدار test.com ارسال کرد، این VirtualHost باید مورد استفاده قرار بگیرد.</p><p dir="rtl">ServerAlias مشخص می کند که به جز ServerName ، چه Host های دیگری هم به این VirtualHost تعلق دارند.</p><p dir="rtl">DocumentRoot هم مسیر ریشه ی سایت test.com را مشخص می کند.</p><p dir="rtl">در انتها فراموش نکنید که پس از ویرایش پیکربندی Apache باید Apache را restart و یا reload کنید تا تنظیمات اعمال شود.</p><p dir="rtl">به این ترتیب شما توانستید که یک سرور درست کنید که چندین سایت را میزبانی می کند. تشخیص سایت هم بر اساس هدر host می باشد و با VirtualHost ها Match می شود.</p><p dir="rtl">موفق باشید.</p><p dir="rtl">لطفا نظرات و سوالات و انتقادات و پیشنهادات خود را در همین صفحه به صورت دیدگاه برای من ارسال کنید.</p><p dir="rtl">متشکرم</p></article><div id="comments"><div id="disqus_thread"></div><script type="application/javascript">
+&lt;/VirtualHost&gt;</pre><p dir="rtl">*:80 آدرس IP و شماره پورتی است این VirtualHost بر روی آن کار می کند. * به این معنی است که بر روی تمام IP ها کار می کند.</p><p dir="rtl">ServerName مشخص می کند این VirtualHost برای سایت test.com است. یعنی اگر مرورگر هدر Host را با مقدار test.com ارسال کرد، این VirtualHost باید مورد استفاده قرار بگیرد.</p><p dir="rtl">ServerAlias مشخص می کند که به جز ServerName ، چه Host های دیگری هم به این VirtualHost تعلق دارند.</p><p dir="rtl">DocumentRoot هم مسیر ریشه ی سایت test.com را مشخص می کند.</p><p dir="rtl">در انتها فراموش نکنید که پس از ویرایش پیکربندی Apache باید Apache را restart و یا reload کنید تا تنظیمات اعمال شود.</p><p dir="rtl">به این ترتیب شما توانستید که یک سرور درست کنید که چندین سایت را میزبانی می کند. تشخیص سایت هم بر اساس هدر host می باشد و با VirtualHost ها Match می شود.</p><p dir="rtl">موفق باشید.</p><p dir="rtl">لطفا نظرات و سوالات و انتقادات و پیشنهادات خود را در همین صفحه به صورت دیدگاه برای من ارسال کنید.</p><p dir="rtl">متشکرم</p></article><div id="comments"><script>
+      var disqus_config = function () { 
+        this.language = "fa";
+      };
+    </script><div id="disqus_thread"></div><script type="application/javascript">
     window.disqus_config = function () {
     
     

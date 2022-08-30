@@ -16,7 +16,11 @@ pecl install uploadprogress
 </pre><p>سپس یک خط به فایل php.ini اضافه کنید:</p><pre class="brush: as3;fontsize: 100; first-line: 1;">extension=uploadprogress.so</pre><p>در نهایت:</p><pre class="brush: bash;fontsize: 100; first-line: 1;">service httpd restart</pre><p>تذکر:</p><p>احتمالا ممکن است که محل ذخیره شدن فایل uploadprogress.so متفاوت باشد. در این صورت، باید خط زیر را نیز به فایل php.ini قبل از دستور فوق اضافه کنید:</p><pre class="brush: plain;fontsize: 100; first-line: 1;">;Directory in which the loadable extensions (modules) reside.
 extension_dir = "/usr/local/lib/php/extensions/no-debug-non-zts-20090626/"
 </pre><p>البته مسیر extension_dir ممکن است با این متفاوت باشد. یک راه برای یافتن مسیر درست این است که در سیستم به دنبال فایل uploadprogress.so بگردید:</p><pre class="brush: bash;fontsize: 100; first-line: 1;">updatedb
-locate uploadprogress.so</pre><h5>مطالب مرتبط:</h5><ul><li></li></ul></article><div id="comments"><div id="disqus_thread"></div><script type="application/javascript">
+locate uploadprogress.so</pre><h5>مطالب مرتبط:</h5><ul><li></li></ul></article><div id="comments"><script>
+      var disqus_config = function () { 
+        this.language = "fa";
+      };
+    </script><div id="disqus_thread"></div><script type="application/javascript">
     window.disqus_config = function () {
     
     

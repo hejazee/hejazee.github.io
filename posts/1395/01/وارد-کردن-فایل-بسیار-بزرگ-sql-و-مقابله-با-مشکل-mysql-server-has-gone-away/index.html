@@ -12,7 +12,11 @@ if (!doNotTrack) {
 <span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse mb-3 mb-lg-0" id="navbarSupportedContent"><ul class="navbar-nav me-auto mb-2 mb-lg-0"><li class="nav-item"><a class="nav-link" href="/contact/">تماس</a></li><li class="nav-item"><a class="nav-link" href="/about/">درباره</a></li></ul></div></div></nav><div class="container mt-4"><div class="row"><div class="col-md-9"><header><h1 class="post-title fw-bold fs-2"><a class="text-dark" href="/posts/1395/01/%D9%88%D8%A7%D8%B1%D8%AF-%DA%A9%D8%B1%D8%AF%D9%86-%D9%81%D8%A7%DB%8C%D9%84-%D8%A8%D8%B3%DB%8C%D8%A7%D8%B1-%D8%A8%D8%B2%D8%B1%DA%AF-sql-%D9%88-%D9%85%D9%82%D8%A7%D8%A8%D9%84%D9%87-%D8%A8%D8%A7-%D9%85%D8%B4%DA%A9%D9%84-mysql-server-has-gone-away/">وارد کردن فایل بسیار بزرگ SQL و مقابله با مشکل MySQL Server has gone away</a></h1></header><small class="d-block text-secondary post-date">ارسال شده در
 <time datetime="2016-03-26">Mar 26, 2016</time></small><article class="blog-post" role="article" typeof="schema:Article"><p>گاهی موقع وارد کردن یک فایل بزرگ در MySQL با خطای MySQL Server has gone away روبرو میشویم
 برای حل این خطا باید تنظیمات max_allowed_packet و wait_timeout را افزایش دهید.</p><p>اما راه جالبی برای وارد کردن فایل های SQL این است که از دستور زیر استفاده کنید.</p><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sql" data-lang="sql"><span style="display:flex"><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f" id="hl-0-1"><a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1</a></span><span><span style="color:#66d9ef">SET</span> autocommit<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span> ; <span style="color:#66d9ef">source</span> the_sql_file.<span style="color:#66d9ef">sql</span> ; <span style="color:#66d9ef">COMMIT</span> ;
-</span></span></code></pre></div><p>با دستور فوق، حتی اگر بخشی از فایل با خطا مواجه شود، ادامه ی آن را وارد میکند.</p></article><div id="comments"><div id="disqus_thread"></div><script type="application/javascript">
+</span></span></code></pre></div><p>با دستور فوق، حتی اگر بخشی از فایل با خطا مواجه شود، ادامه ی آن را وارد میکند.</p></article><div id="comments"><script>
+      var disqus_config = function () { 
+        this.language = "fa";
+      };
+    </script><div id="disqus_thread"></div><script type="application/javascript">
     window.disqus_config = function () {
     
     
